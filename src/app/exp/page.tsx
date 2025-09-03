@@ -30,7 +30,7 @@ export default function Experience() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <h2 className="text-3xl font-semibold mb-8 text-cyan-400">Work Experience</h2>
+            <h2 className="text-3xl font-semibold mb-8" style={{ color: '#06b6d4' }}>Work Experience</h2>
             <div className="space-y-6">
               <Card className="bg-slate-800/30 border-slate-700/50">
                 <CardHeader>
@@ -39,7 +39,7 @@ export default function Experience() {
                       <CardTitle className="text-xl text-foreground">Software Developer</CardTitle>
                       <CardDescription className="text-slate-300">Tech Company / Freelance</CardDescription>
                     </div>
-                    <Badge variant="outline" className="text-cyan-400 border-cyan-400/50">2022 - Present</Badge>
+                    <Badge variant="outline" className="border-cyan-400/50" style={{ color: '#06b6d4' }}>2022 - Present</Badge>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -64,7 +64,7 @@ export default function Experience() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h2 className="text-3xl font-semibold mb-8 text-cyan-400">Featured Projects</h2>
+            <h2 className="text-3xl font-semibold mb-8" style={{ color: '#06b6d4' }}>Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="bg-slate-800/30 border-slate-700/50">
                 <CardHeader>

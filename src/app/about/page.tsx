@@ -23,7 +23,7 @@ export default function About() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Background</h2>
+                <h2 className="text-2xl font-semibold mb-6" style={{ color: '#06b6d4' }}>Background</h2>
                 <p className="text-lg text-slate-300 mb-6 leading-relaxed">
                   I'm Armaan Amatya, a passionate software developer with a strong interest in 
                   modern web technologies, full-stack development, and innovative tech solutions. 
@@ -41,7 +41,7 @@ export default function About() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Interests & Skills</h2>
+                <h2 className="text-2xl font-semibold mb-6" style={{ color: '#06b6d4' }}>Interests & Skills</h2>
                 <ul className="space-y-3 text-lg text-slate-300">
                   <li>• Full-Stack Web Development</li>
                   <li>• React & Next.js</li>
@@ -60,7 +60,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-slate-800/30 p-8 rounded-lg border border-slate-700/50"
             >
-              <h2 className="text-2xl font-semibold mb-4 text-cyan-400">Mission</h2>
+              <h2 className="text-2xl font-semibold mb-4" style={{ color: '#06b6d4' }}>Mission</h2>
               <p className="text-lg text-slate-300 leading-relaxed">
                 To create innovative and user-friendly software solutions that make a positive 
                 impact on people's lives. I'm committed to continuous learning, writing clean and 

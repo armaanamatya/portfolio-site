@@ -35,24 +35,24 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex-1"
           >
-            <h1 className="text-6xl font-bold mb-6">
+            <h1 className="text-6xl font-bold mb-6" style={{ color: '#06b6d4' }}>
               Armaan Amatya
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl">
-              Software Developer & Technology Enthusiast
+              Building and (<span style={{ color: '#06b6d4' }}>mostly</span>) breaking things.
             </p>
             <div className="flex gap-4">
               <a href="/resume.pdf" download="Armaan_Amatya_Resume.pdf">
-                <Button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2">
+                <Button className="px-6 py-2 text-black" style={{ backgroundColor: '#06b6d4' }}>
                   <FileDown className="mr-2 h-4 w-4" />
                   Download Resume
                 </Button>
               </a>
-              <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800 px-6 py-2">
+              <Button variant="outline" className="px-6 py-2 hover:bg-slate-800" style={{ borderColor: '#06b6d4', color: '#06b6d4' }}>
                 <Github className="mr-2 h-4 w-4" />
                 GitHub
               </Button>
-              <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800 px-6 py-2">
+              <Button variant="outline" className="px-6 py-2 hover:bg-slate-800" style={{ borderColor: '#06b6d4', color: '#06b6d4' }}>
                 <Linkedin className="mr-2 h-4 w-4" />
                 LinkedIn
               </Button>
