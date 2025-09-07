@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, FileDown } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Github, Linkedin, FileDown, Bot, Brain, TrendingUp, ExternalLink } from "lucide-react";
 import Navbar from "@/components/navbar";
+import NavigationPointers from "@/components/navigation-pointers";
 
 export default function Home() {
   return (
@@ -69,26 +71,124 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Additional Content for Testing Scroll */}
+      {/* What I'm upto Section */}
       <div className="min-h-screen bg-background p-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-foreground">About Me</h2>
-          <p className="text-xl text-slate-300 mb-8">
-            This is additional content to test the scroll behavior of the navbar. 
-            When you scroll down, the navbar should disappear, and when you scroll up, it should reappear.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-            <div className="bg-slate-800/50 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-foreground">Education</h3>
-              <p className="text-slate-300">Academic background and qualifications</p>
-            </div>
-            <div className="bg-slate-800/50 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-foreground">Research</h3>
-              <p className="text-slate-300">Cosmological research and AI applications</p>
-            </div>
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6" style={{ color: '#06b6d4' }}>What I&apos;m upto</h2>
+            <div className="w-24 h-1 bg-[#06b6d4] mx-auto rounded-full"></div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* AI Agents Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+            >
+              <Card className="relative overflow-hidden bg-slate-900/50 border-slate-800 hover:border-[#06b6d4]/50 transition-all duration-300 group h-full">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#06b6d4] to-[#0891b2]"></div>
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 rounded-lg bg-[#06b6d4]/10">
+                      <Bot className="h-6 w-6" style={{ color: '#06b6d4' }} />
+                    </div>
+                    <CardTitle className="text-xl text-white group-hover:text-[#06b6d4] transition-colors">
+                      Building AI Agents
+                    </CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-slate-400 leading-relaxed mb-4">
+                    Developing autonomous AI systems that can understand context, make decisions, 
+                    and interact naturally with users and other systems.
+                  </CardDescription>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#06b6d4] text-sm font-medium">Currently Active</span>
+                    <div className="w-2 h-2 bg-[#06b6d4] rounded-full animate-pulse"></div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* AI Research Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+            >
+              <Card className="relative overflow-hidden bg-slate-900/50 border-slate-800 hover:border-[#06b6d4]/50 transition-all duration-300 group h-full">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#06b6d4] to-[#0891b2]"></div>
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 rounded-lg bg-[#06b6d4]/10">
+                      <Brain className="h-6 w-6" style={{ color: '#06b6d4' }} />
+                    </div>
+                    <CardTitle className="text-xl text-white group-hover:text-[#06b6d4] transition-colors">
+                      AI Research
+                    </CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-slate-400 leading-relaxed mb-4">
+                    Exploring cutting-edge research in machine learning, neural architectures, 
+                    and computational intelligence to push the boundaries of what&apos;s possible.
+                  </CardDescription>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#06b6d4] text-sm font-medium">In Progress</span>
+                    <div className="w-2 h-2 bg-[#06b6d4] rounded-full animate-pulse"></div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Financial ML Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.4 }}
+            >
+              <Card className="relative overflow-hidden bg-slate-900/50 border-slate-800 hover:border-[#06b6d4]/50 transition-all duration-300 group h-full">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#06b6d4] to-[#0891b2]"></div>
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 rounded-lg bg-[#06b6d4]/10">
+                      <TrendingUp className="h-6 w-6" style={{ color: '#06b6d4' }} />
+                    </div>
+                    <CardTitle className="text-xl text-white group-hover:text-[#06b6d4] transition-colors">
+                      Financial ML Models
+                    </CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-slate-400 leading-relaxed mb-4">
+                    Fine-tuning models for financial stock analysis, diving deep into LLM and RL courses 
+                    on Hugging Face to build robust trading intelligence.
+                  </CardDescription>
+                  <div className="flex items-center justify-between">
+                    <a 
+                      href="https://huggingface.co/learn" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-[#06b6d4] text-sm font-medium hover:text-[#0891b2] transition-colors"
+                    >
+                      HF Courses <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <div className="w-2 h-2 bg-[#06b6d4] rounded-full animate-pulse"></div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </div>
+
+      <NavigationPointers />
     </div>
   );
 }

@@ -58,7 +58,7 @@ export default function Navbar() {
           <Link href="/about" className={`transition-colors text-sm ${isActive("/about") ? "text-[#06b6d4]" : "text-white hover:text-[#06b6d4]"}`}>
             About
           </Link>
-          <Link href="/exp" className={`flex items-center gap-1 transition-colors text-sm ${isActive("/exp") ? "text-[#06b6d4]" : "text-white hover:text-[#06b6d4]"}`}>
+          <Link href="/projects" className={`flex items-center gap-1 transition-colors text-sm ${isActive("/projects") ? "text-[#06b6d4]" : "text-white hover:text-[#06b6d4]"}`}>
             Projects
           </Link>
         </div>

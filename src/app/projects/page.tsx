@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
+import NavigationPointers from "@/components/navigation-pointers";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-export default function Experience() {
+export default function Projects() {
   return (
     <div className="min-h-screen bg-background text-foreground dark">
       <Navbar />
@@ -145,6 +146,8 @@ export default function Experience() {
           </motion.section>
         </div>
       </div>
+
+      <NavigationPointers />
     </div>
   );
 }
