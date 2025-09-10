@@ -42,8 +42,20 @@ export default function NavigationPointers() {
         <motion.div
           key={`${pointer.direction}-${pointer.route}`}
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3, delay: index * 0.1 }}
+          animate={{ 
+            opacity: 1, 
+            scale: 1,
+            x: [0, pointer.direction === "left" ? -3 : 3, 0]
+          }}
+          transition={{ 
+            duration: 0.3, 
+            delay: index * 0.1,
+            x: {
+              repeat: Infinity,
+              duration: 2,
+              ease: "easeInOut"
+            }
+          }}
           className={`fixed top-1/2 -translate-y-1/2 z-40 hidden lg:block ${
             pointer.direction === "left" ? "left-6" : "right-6"
           }`}
