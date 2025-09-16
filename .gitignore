@@ -44,11 +44,20 @@ Thumbs.db
 
 # Claude Code files
 .claude/
+CLAUDE.md
 
 # Temporary files
 *.tmp
 *.temp
 
-# Screenshots and PDFs (keeping these untracked)
+# Sensitive files - screenshots, PDFs, images
 *.png
+*.jpg
+*.jpeg
+*.gif
 *.pdf
+Screenshot*
+*.ico
+
+# Exclude specific sensitive files
+res*.pdf
