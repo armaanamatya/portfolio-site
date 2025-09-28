@@ -56,7 +56,15 @@ function ExperienceCard({
             'Java': 'java',
             'Spring': 'spring',
             'JWT': 'spring',
-            'API': 'fastapi'
+            'API': 'fastapi',
+            'LangGraph': 'langgraph',
+            "postman": "postman",
+            "fastapi": "fastapi",
+            "postgres": "postgres",
+            "spring": "spring",
+            "jwt": "jwt",
+            "api": "api",
+            "langgraph": "langgraph",
           };
           
           const iconName = techMap[tech] || tech.toLowerCase();
