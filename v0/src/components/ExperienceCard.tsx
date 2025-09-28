@@ -38,9 +38,37 @@ function ExperienceCard({
         {description}
       </p>
       <div className="tech-stack">
-        {techStack.map((tech, index) => (
-          <span key={index} className="tech-icon">{tech}</span>
-        ))}
+        {techStack.map((tech, index) => {
+          const techMap: { [key: string]: string } = {
+            'React': 'react',
+            'TS': 'ts',
+            'TypeScript': 'ts', 
+            'Python': 'python',
+            'AI': 'tensorflow',
+            'ML': 'pytorch',
+            'LLM': 'pytorch',
+            'Research': 'python',
+            'Next.js': 'nextjs',
+            'Prisma': 'prisma',
+            'Supabase': 'supabase',
+            'BERT': 'pytorch',
+            'NLP': 'python',
+            'Java': 'java',
+            'Spring': 'spring',
+            'JWT': 'spring',
+            'API': 'fastapi'
+          };
+          
+          const iconName = techMap[tech] || tech.toLowerCase();
+          const iconUrl = `https://skillicons.dev/icons?i=${iconName}&theme=dark`;
+          
+          return (
+            <div key={index} className="tech-icon">
+              <img src={iconUrl} alt={tech} className="tech-icon-img" />
+              <span className="tech-icon-text">{tech}</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
