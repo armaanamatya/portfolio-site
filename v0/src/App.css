@@ -38,6 +38,25 @@
   font-size: 1.125rem;
   font-weight: 500;
   letter-spacing: 0.02em;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.logo-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.logo-text:hover::after {
+  width: 100%;
 }
 
 .header-right {
@@ -98,49 +117,118 @@
   font-size: 1rem;
 }
 
-.main-content {
-  padding: 2rem 4rem;
+/* Hero Section */
+.hero-section {
+  padding: 4rem 4rem 3rem;
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
-.profile-section {
+.hero-content {
   display: flex;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-.avatar {
-  flex-shrink: 0;
+.profile-image {
+  margin-bottom: 1rem;
 }
 
-.avatar img {
+.profile-image img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid #1a1a1a;
 }
 
-.intro h1 {
-  font-size: 2rem;
+.hero-name {
+  font-size: 3rem;
   font-weight: 300;
-  margin: 0 0 1rem 0;
+  margin: 0;
   color: #ffffff;
   letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
-.description {
+.hero-tagline {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.4;
+}
+
+.hero-tagline .highlight {
+  color: #cccccc;
+  font-style: italic;
+}
+
+.hero-description {
   font-size: 1rem;
   line-height: 1.6;
   color: #cccccc;
   margin: 0 0 1rem 0;
+  max-width: 600px;
 }
 
-.location {
-  font-size: 0.875rem;
+.hero-location {
+  font-size: 0.9rem;
   color: #888888;
-  margin: 0;
+  margin: 0 0 2rem 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.action-btn.primary {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.action-btn.primary:hover {
+  background: #e5e5e5;
+  border-color: #e5e5e5;
+  transform: translateY(-1px);
+}
+
+.action-btn.secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.action-btn.secondary:hover {
+  background: #1a1a1a;
+  border-color: #555555;
+  transform: translateY(-1px);
+}
+
+.main-content {
+  padding: 0 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .experience-section {
@@ -163,7 +251,20 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.role-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.role-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
 }
 
 .role h3 {
@@ -182,16 +283,30 @@
 
 .company-logo {
   background: #2a2a2a;
-  color: #ffffff;
-  padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.company-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.company-logo-text {
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
 }
 
+
 .location-tag {
   font-size: 0.75rem;
-  color: #888888;
+  color: #ffffff;
 }
 
 .role-period {
@@ -240,18 +355,31 @@
     padding: 1rem 2rem;
   }
   
-  .points-section {
-    padding: 1rem 2rem;
+  .hero-section {
+    padding: 3rem 2rem 2rem;
+  }
+  
+  .hero-name {
+    font-size: 2.5rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+    max-width: 280px;
   }
   
   .main-content {
-    padding: 1.5rem 2rem;
-  }
-  
-  .profile-section {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
+    padding: 0 2rem 1.5rem;
   }
   
   .role-header {
@@ -266,11 +394,15 @@
     padding: 1rem 1.5rem;
   }
   
-  .points-section {
-    padding: 1rem 1.5rem;
+  .hero-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .hero-name {
+    font-size: 2rem;
   }
   
   .main-content {
-    padding: 1.5rem 1.5rem;
+    padding: 0 1.5rem;
   }
 }
