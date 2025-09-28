@@ -282,7 +282,7 @@
 }
 
 .company-logo {
-  background: #2a2a2a;
+  background: rgba(42, 42, 42, 0.3);
   border-radius: 0.25rem;
   padding: 0.25rem;
   display: flex;
