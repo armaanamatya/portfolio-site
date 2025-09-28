@@ -7,7 +7,7 @@ function App() {
       <header className="header">
         <div className="header-left">
           <div className="logo">
-            <span className="logo-text">MY SPACE ON THE INTERNET</span>
+            <span className="logo-text">port69</span>
           </div>
         </div>
         {/* <div className="header-right">
@@ -29,7 +29,7 @@ function App() {
           <div className="intro">
             <h1>Hi, I am Armaan Amatya,</h1>
             <p className="description">
-              yeet
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <p className="location">Houston, TX</p>
           </div>
