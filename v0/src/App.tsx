@@ -1,5 +1,6 @@
 import './App.css'
 import ExperienceCard from './components/ExperienceCard'
+import Skills from './components/Skills'
 
 function App() {
   return (
@@ -34,11 +35,11 @@ function App() {
             <p className="hero-description">
               I'm a 4th-year Computer Science and Math student at the University of Houston with a passion for building and breaking stuff (mostly breaking). Currently working as a Fullstack AI Engineer, from handling frontend UI to serving AI software from the backend.
             </p>
-            <p className="hero-location">📍 Houston, TX</p>
+            <p className="hero-location"> Houston, TX</p>
             
             <div className="hero-actions">
               <a href="/resume.pdf" className="action-btn primary" download>
-                 Resume
+                 Résumé
               </a>
               <a href="https://github.com/armaanamatya" className="action-btn secondary" target="_blank" rel="noopener noreferrer">
                 GitHub
@@ -102,6 +103,8 @@ function App() {
             logoUrl="/logos/f1soft.jpg"
           />
         </div>
+
+        <Skills />
       </main>
     </div>
   )
