@@ -15,69 +15,24 @@ function ExperienceCard({
   company, 
   location, 
   period, 
-  description, 
-  techStack,
   logoUrl 
 }: ExperienceCardProps) {
   return (
     <div className="experience-card">
-      <div className="experience-card-header">
-        <div className="experience-card-left">
-          <h3>{title}</h3>
-          <div className="experience-company-info">
-            <div className="experience-company-logo">
-              {logoUrl && <img src={logoUrl} alt={company} className="experience-company-logo-img" />}
-              <span className="experience-company-logo-text">{company}</span>
-            </div>
+      <div className="experience-card-main">
+        <div className="experience-card-logo">
+          {logoUrl && <img src={logoUrl} alt={company} className="experience-logo-img" title={company} />}
+        </div>
+        <div className="experience-card-content">
+          <div className="experience-card-info">
+            <h3 className="experience-title">{title}</h3>
+            <div className="experience-company">{company}</div>
+          </div>
+          <div className="experience-card-right">
+            <div className="experience-period">{period}</div>
+            <div className="experience-location">{location}</div>
           </div>
         </div>
-        <div className="experience-card-right">
-          <div className="experience-period">{period}</div>
-          <span className="experience-location-tag">{location}</span>
-        </div>
-      </div>
-      <p className="experience-description">
-        {description}
-      </p>
-      <div className="experience-tech-stack">
-        {techStack.map((tech, index) => {
-          const techMap: { [key: string]: string } = {
-            'React': 'react',
-            'TS': 'ts',
-            'TypeScript': 'ts', 
-            'Python': 'python',
-            'AI': 'tensorflow',
-            'ML': 'pytorch',
-            'LLM': 'pytorch',
-            'Research': 'python',
-            'Next.js': 'nextjs',
-            'Prisma': 'prisma',
-            'Supabase': 'supabase',
-            'BERT': 'pytorch',
-            'NLP': 'python',
-            'Java': 'java',
-            'Spring': 'spring',
-            'JWT': 'spring',
-            'API': 'fastapi',
-            'LangGraph': 'langgraph',
-            "postman": "postman",
-            "fastapi": "fastapi",
-            "postgres": "postgres",
-            "spring": "spring",
-            "jwt": "jwt",
-            "api": "api",
-            "langgraph": "langgraph",
-          };
-          
-          const iconName = techMap[tech] || tech.toLowerCase();
-          const iconUrl = `https://skillicons.dev/icons?i=${iconName}&theme=dark`;
-          
-          return (
-            <div key={index} className="experience-tech-icon" title={tech}>
-              <img src={iconUrl} alt={tech} className="experience-tech-icon-img" />
-            </div>
-          );
-        })}
       </div>
     </div>
   );

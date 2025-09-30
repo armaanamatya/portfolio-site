@@ -46,6 +46,58 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop",
     techStack: ['Java', 'Spring Boot', 'JWT', 'PostgreSQL'],
     githubUrl: "#"
+  },
+  {
+    id: 5,
+    title: "E-Commerce Dashboard",
+    description: "Modern e-commerce analytics dashboard with real-time sales tracking and inventory management.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
+    techStack: ['Vue.js', 'Node.js', 'MongoDB', 'Chart.js'],
+    liveUrl: "#",
+    githubUrl: "#"
+  },
+  {
+    id: 6,
+    title: "Mobile Fitness App",
+    description: "Cross-platform fitness tracking app with workout plans, progress monitoring, and social features.",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+    techStack: ['React Native', 'Firebase', 'Redux', 'TypeScript'],
+    liveUrl: "#",
+    githubUrl: "#"
+  },
+  {
+    id: 7,
+    title: "Blockchain Voting System",
+    description: "Secure decentralized voting platform using smart contracts and cryptographic verification.",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=250&fit=crop",
+    techStack: ['Solidity', 'Web3.js', 'Ethereum', 'React'],
+    githubUrl: "#"
+  },
+  {
+    id: 8,
+    title: "Weather Prediction ML",
+    description: "Machine learning model for accurate weather forecasting using historical climate data and neural networks.",
+    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop",
+    techStack: ['Python', 'TensorFlow', 'Pandas', 'Scikit-learn'],
+    githubUrl: "#"
+  },
+  {
+    id: 9,
+    title: "Social Media Scheduler",
+    description: "Automated social media management tool with content scheduling, analytics, and multi-platform posting.",
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
+    techStack: ['Angular', 'Express.js', 'PostgreSQL', 'Redis'],
+    liveUrl: "#",
+    githubUrl: "#"
+  },
+  {
+    id: 10,
+    title: "IoT Smart Home Hub",
+    description: "Centralized IoT device management system with voice control, automation rules, and energy monitoring.",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop",
+    techStack: ['Python', 'Raspberry Pi', 'MQTT', 'Flutter'],
+    liveUrl: "#",
+    githubUrl: "#"
   }
 ];
 
@@ -57,13 +109,13 @@ function ProjectSlider() {
 
   const nextSlide = () => {
     setStartIndex((prevIndex) => 
-      prevIndex + cardsPerView >= projects.length ? 0 : prevIndex + cardsPerView
+      prevIndex + 1 >= projects.length ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setStartIndex((prevIndex) => 
-      prevIndex - cardsPerView < 0 ? Math.max(0, projects.length - cardsPerView) : prevIndex - cardsPerView
+      prevIndex - 1 < 0 ? projects.length - cardsPerView : prevIndex - 1
     );
   };
 
@@ -94,8 +146,13 @@ function ProjectSlider() {
         </button>
         
         <div className="project-cards-container">
-          {visibleProjects.map((project) => (
-            <div key={project.id} className="project-card-compact" onClick={() => openModal(project)}>
+          {visibleProjects.map((project, index) => (
+            <div 
+              key={project.id} 
+              className="project-card-compact" 
+              onClick={() => openModal(project)}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div className="project-image-compact">
                 <img src={project.image} alt={project.title} />
               </div>
