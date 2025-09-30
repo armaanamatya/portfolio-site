@@ -1,6 +1,7 @@
 import './App.css'
 import ExperienceCard from './components/ExperienceCard'
 import Skills from './components/Skills'
+import ProjectSlider from './components/ProjectSlider'
 
 function App() {
   return (
@@ -105,6 +106,8 @@ function App() {
         </div>
 
         <Skills />
+        
+        <ProjectSlider />
       </main>
     </div>
   )

@@ -1,3 +1,5 @@
+import './Skills.css';
+
 interface SkillCategory {
   title: string;
   skills: Array<{
@@ -86,15 +88,15 @@ function Skills() {
   return (
     <div className="skills-section">
       <h2 className="section-title">SKILLS</h2>      
-      <div className="skills-grid">
+      <div className="skills-flow">
         {skillCategories.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="skill-category">
-            <h3 className="category-title">{category.title}</h3>
-            <div className="skills-icons">
+          <div key={categoryIndex} className="skill-category-flow">
+            <h3 className="category-title-flow">{category.title}</h3>
+            <div className="skills-icons-flow">
               {category.skills.map((skill, skillIndex) => {
                 const iconUrl = `https://skillicons.dev/icons?i=${skill.icon}&theme=dark`;
                 return (
-                  <div key={skillIndex} className="skill-icon" title={skill.name}>
+                  <div key={skillIndex} className="skill-icon-flow" title={skill.name}>
                     <img src={iconUrl} alt={skill.name} />
                   </div>
                 );
