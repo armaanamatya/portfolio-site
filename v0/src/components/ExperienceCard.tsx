@@ -1,3 +1,5 @@
+import './ExperienceCard.css';
+
 interface ExperienceCardProps {
   title: string;
   company: string;
@@ -18,26 +20,26 @@ function ExperienceCard({
   logoUrl 
 }: ExperienceCardProps) {
   return (
-    <div className="role">
-      <div className="role-header">
-        <div className="role-left">
+    <div className="experience-card">
+      <div className="experience-card-header">
+        <div className="experience-card-left">
           <h3>{title}</h3>
-          <div className="company-info">
-            <div className="company-logo">
-              {logoUrl && <img src={logoUrl} alt={company} className="company-logo-img" />}
-              <span className="company-logo-text">{company}</span>
+          <div className="experience-company-info">
+            <div className="experience-company-logo">
+              {logoUrl && <img src={logoUrl} alt={company} className="experience-company-logo-img" />}
+              <span className="experience-company-logo-text">{company}</span>
             </div>
           </div>
         </div>
-        <div className="role-right">
-          <div className="role-period">{period}</div>
-          <span className="location-tag">{location}</span>
+        <div className="experience-card-right">
+          <div className="experience-period">{period}</div>
+          <span className="experience-location-tag">{location}</span>
         </div>
       </div>
-      <p className="role-description">
+      <p className="experience-description">
         {description}
       </p>
-      <div className="tech-stack">
+      <div className="experience-tech-stack">
         {techStack.map((tech, index) => {
           const techMap: { [key: string]: string } = {
             'React': 'react',
@@ -71,9 +73,8 @@ function ExperienceCard({
           const iconUrl = `https://skillicons.dev/icons?i=${iconName}&theme=dark`;
           
           return (
-            <div key={index} className="tech-icon">
-              <img src={iconUrl} alt={tech} className="tech-icon-img" />
-              <span className="tech-icon-text">{tech}</span>
+            <div key={index} className="experience-tech-icon" title={tech}>
+              <img src={iconUrl} alt={tech} className="experience-tech-icon-img" />
             </div>
           );
         })}
