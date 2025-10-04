@@ -127,6 +127,9 @@
 .hero-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .hero-header {
@@ -134,6 +137,10 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
+}
+
+.profile-image {
+  margin-bottom: 1.5rem;
 }
 
 .profile-image img {
@@ -151,7 +158,7 @@
 .hero-name {
   font-size: 2rem;
   font-weight: 400;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1rem 0;
   color: #ffffff;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -361,5 +368,127 @@
   
   .main-content {
     padding: 0 1.5rem;
+  }
+}
+
+/* Bottom Toolbar - Ultra-Compact Horizontal Design */
+.bottom-toolbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(15, 15, 15, 0.95);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 6px 16px;
+  backdrop-filter: blur(20px);
+  z-index: 9999;
+  height: 40px;
+  min-width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.bottom-toolbar:hover {
+  transform: translateX(-50%) scaleX(1.1);
+}
+
+.toolbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.toolbar-btn:hover {
+  color: #ffffff;
+}
+
+.toolbar-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Toolbar Separator */
+.toolbar-separator {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+/* Bottom Fade Effect */
+.bottom-fade {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.5) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Responsive adjustments for toolbar */
+@media (max-width: 768px) {
+  .bottom-toolbar {
+    bottom: 15px;
+    padding: 5px 14px;
+    gap: 0.4rem;
+    min-width: 200px;
+    height: 36px;
+  }
+  
+  .toolbar-btn {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+  
+  .toolbar-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .toolbar-separator {
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bottom-toolbar {
+    bottom: 10px;
+    padding: 4px 12px;
+    gap: 0.3rem;
+    min-width: 180px;
+    height: 32px;
+  }
+  
+  .toolbar-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+  
+  .toolbar-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .toolbar-separator {
+    height: 16px;
   }
 }
