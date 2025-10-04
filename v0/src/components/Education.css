@@ -1,0 +1,10 @@
+/* Education Section Styles */
+.education-section {
+  margin: 3rem 0;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
