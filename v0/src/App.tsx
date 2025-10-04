@@ -78,7 +78,7 @@ function App() {
               "Developed an asynchronous FastAPI backend with WebSocket support for real-time updates and AI agent communication",
               "Implemented advanced state management and orchestrated complex AI workflows for data processing"
             ]}
-            techStack={['React', 'TypeScript', 'Python', 'FastAPI', 'LangGraph', 'AI', 'WebSocket']}
+            techStack={['React', 'TypeScript', 'Python', 'FastAPI']}
             logoUrl="/logos/stealth.jpg"
             isCurrent={true}
             companyUrl="https://example.com"
@@ -95,7 +95,7 @@ function App() {
               "Contributed to experimental design and data analysis for AI safety and alignment research",
               "Published findings in peer-reviewed conferences and journals"
             ]}
-            techStack={['Python', 'ML', 'LLM', 'Research', 'PyTorch', 'Transformers']}
+            techStack={['Python', 'PyTorch']}
             logoUrl="/logos/algoverse.jpg"
             isCurrent={true}
             companyUrl="https://algoverse.ai"
@@ -128,7 +128,7 @@ function App() {
               "Improved project planning efficiency by 37% through automated requirement parsing and analysis",
               "Implemented model fine-tuning and evaluation frameworks for domain-specific NLP tasks"
             ]}
-            techStack={['Python', 'BERT', 'NLP', 'ML', 'PyTorch', 'Transformers', 'scikit-learn']}
+            techStack={['Python', 'PyTorch', 'scikit-learn']}
             logoUrl="/logos/fuse.jpg"
             companyUrl="https://fusemachines.com"
           />
@@ -144,7 +144,7 @@ function App() {
               "Optimized database queries and implemented caching strategies for improved application performance",
               "Collaborated with cross-functional teams to deliver scalable enterprise software solutions"
             ]}
-            techStack={['Java', 'Spring Boot', 'JWT', 'REST API', 'MySQL', 'Redis']}
+            techStack={['Java', 'Spring Boot', 'MySQL', 'Redis']}
             logoUrl="/logos/f1soft.jpg"
             companyUrl="https://f1soft.com"
           />
