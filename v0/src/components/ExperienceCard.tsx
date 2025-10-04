@@ -63,9 +63,41 @@ function ExperienceCard({
           </div>
           
           <div className="tech-stack">
-            {techStack.map((tech, index) => (
-              <span key={index} className="tech-badge">{tech}</span>
-            ))}
+            {techStack.map((tech, index) => {
+              // Filter out generic terms and map to skillicon names
+              const skillIconMap: { [key: string]: string } = {
+                'React': 'react',
+                'TypeScript': 'ts',
+                'Python': 'python',
+                'FastAPI': 'fastapi',
+                'Next.js': 'nextjs',
+                'Prisma': 'prisma',
+                'Supabase': 'supabase',
+                'Node.js': 'nodejs',
+                'Java': 'java',
+                'Spring Boot': 'spring',
+                'MySQL': 'mysql',
+                'Redis': 'redis',
+                'PyTorch': 'pytorch',
+                'scikit-learn': 'scikitlearn'
+              };
+
+              const iconName = skillIconMap[tech];
+              
+              // Skip generic terms
+              const genericTerms = ['AI', 'ML', 'NLP', 'BERT', 'LLM', 'Research', 'WebSocket', 'LangGraph', 'REST API'];
+              if (genericTerms.includes(tech) || !iconName) {
+                return null;
+              }
+
+              const iconUrl = `https://skillicons.dev/icons?i=${iconName}&theme=dark`;
+              
+              return (
+                <div key={index} className="tech-icon" title={tech}>
+                  <img src={iconUrl} alt={tech} />
+                </div>
+              );
+            })}
           </div>
           
           {companyUrl && (

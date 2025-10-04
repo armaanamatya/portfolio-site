@@ -188,11 +188,8 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   'Prisma': 'prisma',
                   'Supabase': 'supabase',
                   'PyTorch': 'pytorch',
-                  'Transformers': 'pytorch',
-                  'Research': 'python',
                   'Java': 'java',
                   'Spring Boot': 'spring',
-                  'JWT': 'spring',
                   'PostgreSQL': 'postgres'
                 };
                 

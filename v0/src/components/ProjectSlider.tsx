@@ -36,7 +36,7 @@ const projects: Project[] = [
     title: "LLM Research Paper",
     description: "Collaborative research on Large Language Models and agentic capabilities with Stanford, Berkeley, and Vanderbilt researchers.",
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop",
-    techStack: ['Python', 'PyTorch', 'Transformers', 'Research'],
+    techStack: ['Python', 'PyTorch', 'Research'],
     githubUrl: "#"
   },
   {
@@ -44,7 +44,7 @@ const projects: Project[] = [
     title: "RESTful API System",
     description: "High-performance RESTful APIs with Java Spring Boot, reducing request latency by 50% with JWT authentication.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop",
-    techStack: ['Java', 'Spring Boot', 'JWT', 'PostgreSQL'],
+    techStack: ['Java', 'Spring Boot', 'PostgreSQL'],
     githubUrl: "#"
   },
   {
@@ -172,11 +172,9 @@ function ProjectSlider() {
                         'Prisma': 'prisma',
                         'Supabase': 'supabase',
                         'PyTorch': 'pytorch',
-                        'Transformers': 'pytorch',
                         'Research': 'python',
                         'Java': 'java',
                         'Spring Boot': 'spring',
-                        'JWT': 'spring',
                         'PostgreSQL': 'postgres'
                       };
                       
