@@ -16,7 +16,7 @@ interface ExperienceCardProps {
 function ExperienceCard({ 
   title, 
   company, 
-  location, 
+  // location, 
   period, 
   description,
   techStack,
