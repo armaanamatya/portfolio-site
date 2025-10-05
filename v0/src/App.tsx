@@ -16,6 +16,15 @@ function App() {
             </div>
             <h1 className="hero-name">Hi, I'm Armaan <span className="wave-emoji">👋</span></h1>
             <p className="hero-subtitle">Senior majoring in CS + Math @ <img src="/uh.jpg" alt="University of Houston" className="uh-logo" title="University of Houston" /></p>
+            
+            {/* Debug: Test image loading */}
+            <div style={{marginTop: '20px', padding: '10px', background: 'rgba(255,0,0,0.1)', border: '2px solid red'}}>
+              <h3>Debug: Testing Images</h3>
+              <img src="/uh.jpg" alt="UH Test" style={{width: '50px', height: '50px', border: '2px solid blue'}} />
+              <img src="/logos/stealth.jpg" alt="Stealth Test" style={{width: '50px', height: '50px', border: '2px solid green'}} />
+              <img src="/logos/algoverse.jpg" alt="Algoverse Test" style={{width: '50px', height: '50px', border: '2px solid yellow'}} />
+              <p>If you see colored borders above, images are loading correctly.</p>
+            </div>
           </div>
         </div>
 
