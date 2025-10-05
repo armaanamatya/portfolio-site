@@ -1,5 +1,21 @@
 {
-  "buildCommand": "cd v0 && npm run build",
-  "outputDirectory": "v0/dist",
-  "installCommand": "cd v0 && npm install"
+  "version": 2,
+  "builds": [
+    {
+      "src": "v0/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
