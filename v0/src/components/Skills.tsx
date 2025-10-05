@@ -43,6 +43,7 @@ function Skills() {
       skills: [
         { name: "Node.js", icon: "nodejs" },
         { name: "Express", icon: "express" },
+        { name: "NestJS", icon: "nestjs" },
         { name: "Spring", icon: "spring" },
         { name: "FastAPI", icon: "fastapi" },
         { name: "Flask", icon: "flask" },
@@ -62,13 +63,15 @@ function Skills() {
         { name: "PostgreSQL", icon: "postgres" },
         { name: "MongoDB", icon: "mongodb" },
         { name: "Supabase", icon: "supabase" },
-        { name: "Redis", icon: "redis" }
+        { name: "Redis", icon: "redis" },
+        { name: "Prisma", icon: "prisma" }
       ]
     },
     {
       title: "DevOps",
       skills: [
         { name: "Docker", icon: "docker" },
+        { name: "Kubernetes", icon: "kubernetes" },
         { name: "Linux", icon: "linux" },
         { name: "Cloudflare", icon: "cloudflare" },
         { name: "Postman", icon: "postman" },
@@ -81,6 +84,13 @@ function Skills() {
       skills: [
         { name: "Google Cloud", icon: "gcp" },
         { name: "AWS", icon: "aws" }
+      ]
+    },
+    {
+      title: "Others",
+      skills: [
+        { name: "Photoshop", icon: "ps" },
+        { name: "Figma", icon: "figma" }
       ]
     }
   ];

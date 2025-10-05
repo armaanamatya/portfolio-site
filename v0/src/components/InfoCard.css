@@ -1,5 +1,5 @@
-/* Experience Card Styles */
-.experience-card {
+/* Info Card Styles - Reusing Experience Card Design */
+.info-card {
   margin-bottom: 0.75rem;
   background: transparent;
   border-radius: 0.75rem;
@@ -7,11 +7,11 @@
   transition: all 0.3s ease;
 }
 
-.experience-card:hover {
+.info-card:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.experience-card-header {
+.info-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,18 +20,18 @@
   transition: all 0.3s ease;
 }
 
-.experience-card-left {
+.info-card-left {
   display: flex;
   align-items: center;
   gap: 0.625rem;
   flex: 1;
 }
 
-.experience-card-logo {
+.info-card-logo {
   flex-shrink: 0;
 }
 
-.experience-logo-img {
+.info-logo-img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -39,7 +39,7 @@
   transition: all 0.3s ease;
 }
 
-.experience-card-info {
+.info-card-info {
   flex: 1;
 }
 
@@ -50,15 +50,30 @@
   margin-bottom: 0.125rem;
 }
 
-.experience-title {
+.info-title {
   font-size: 0.9rem;
   font-weight: 600;
   color: #ffffff;
   margin: 0;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-.experience-company {
+.info-title .external-link-icon {
+  width: 12px;
+  height: 12px;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.info-card:hover .info-title .external-link-icon {
+  opacity: 1;
+}
+
+.info-subtitle {
   font-size: 0.8rem;
   color: #cccccc;
   margin: 0 0 0.125rem 0;
@@ -66,13 +81,14 @@
 }
 
 .click-details {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: #888888;
   margin: 0;
   font-weight: 400;
+  font-style: italic;
 }
 
-.experience-card-right {
+.info-card-right {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -91,7 +107,7 @@
   flex-shrink: 0;
 }
 
-.experience-period {
+.info-period {
   font-size: 0.75rem;
   color: #888888;
   font-weight: 400;
@@ -116,7 +132,7 @@
   height: 100%;
 }
 
-.experience-details {
+.info-details {
   padding: 0 0.75rem 0.75rem 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   animation: expandDetails 0.3s ease-out;
@@ -133,25 +149,25 @@
   }
 }
 
-.experience-description {
+.info-description {
   margin-bottom: 1rem;
   padding-top: 1rem;
 }
 
-.experience-description ul {
+.info-description ul {
   margin: 0;
   padding-left: 1.5rem;
   list-style-type: disc;
 }
 
-.experience-description li {
+.info-description li {
   color: #cccccc;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 0.5rem;
 }
 
-.experience-description li:last-child {
+.info-description li:last-child {
   margin-bottom: 0;
 }
 
@@ -175,31 +191,6 @@
 .tech-badge:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
-}
-
-.tech-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0.125rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.tech-icon:hover {
-  transform: translateY(-2px) scale(1.05);
-}
-
-.tech-icon img {
-  width: 24px;
-  height: 24px;
-  border-radius: 0.25rem;
-  transition: all 0.3s ease;
-  filter: brightness(0.9);
-}
-
-.tech-icon:hover img {
-  filter: brightness(1.2) drop-shadow(0 0 6px rgba(0, 212, 255, 0.4));
 }
 
 .visit-company-btn {
@@ -230,32 +221,32 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .experience-card-header {
+  .info-card-header {
     padding: 0.75rem;
   }
   
-  .experience-card-left {
+  .info-card-left {
     gap: 0.5rem;
   }
   
-  .experience-logo-img {
+  .info-logo-img {
     width: 52px;
     height: 52px;
   }
   
-  .experience-title {
+  .info-title {
     font-size: 0.9rem;
   }
   
-  .experience-company {
+  .info-subtitle {
     font-size: 0.8rem;
   }
   
   .click-details {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
   
-  .experience-period {
+  .info-period {
     font-size: 0.8rem;
   }
   
@@ -264,40 +255,40 @@
     padding: 0.2rem 0.4rem;
   }
   
-  .experience-details {
+  .info-details {
     padding: 0 0.75rem 0.75rem 0.75rem;
   }
 }
 
 @media (max-width: 480px) {
-  .experience-card-right {
+  .info-card-right {
     flex-direction: column;
     align-items: flex-end;
     gap: 0.5rem;
   }
   
-  .experience-card-header {
+  .info-card-header {
     padding: 0.625rem;
   }
   
-  .experience-logo-img {
+  .info-logo-img {
     width: 42px;
     height: 42px;
   }
   
-  .experience-title {
+  .info-title {
     font-size: 0.85rem;
   }
   
-  .experience-company {
+  .info-subtitle {
     font-size: 0.75rem;
   }
   
   .click-details {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
   
-  .experience-period {
+  .info-period {
     font-size: 0.75rem;
   }
   
