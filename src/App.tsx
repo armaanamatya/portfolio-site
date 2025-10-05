@@ -1,4 +1,5 @@
 import './App.css'
+// Updated for root directory deployment
 import ExperienceCard from './components/ExperienceCard'
 import Certificates from './components/Certificates'
 import Education from './components/Education'
