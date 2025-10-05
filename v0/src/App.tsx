@@ -8,31 +8,14 @@ import ProjectSlider from './components/ProjectSlider'
 function App() {
   return (
     <div className="portfolio">
-      <header className="header">
-        <div className="header-left">
-          <div className="logo">
-            <span className="logo-text">port69</span>
-          </div>
-        </div>
-        {/* <div className="header-right">
-          <div className="status-dot"></div>
-          <span>Call</span>
-          <div className="header-controls">
-            <button className="theme-toggle">🌙</button>
-            <span className="language">EN</span>
-            <div className="profile-icon">👤</div>
-          </div>
-        </div> */}
-      </header>
-
       <main className="main-content">
         <div className="hero-section">
           <div className="hero-content">
             <div className="profile-image">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Armaan Amatya" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Armaan Amatya" />
             </div>
             <h1 className="hero-name">Hi, I'm Armaan <span className="wave-emoji">👋</span></h1>
-            <p className="hero-subtitle">Senior majoring in CS + Math @ <img src="/misc/images/uh.jpg" alt="University of Houston" className="uh-logo" title="University of Houston" /></p>
+            <p className="hero-subtitle">Senior majoring in CS + Math @ <img src="/public/uh.jpg" alt="University of Houston" className="uh-logo" title="University of Houston" /></p>
           </div>
         </div>
 
