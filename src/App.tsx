@@ -59,7 +59,6 @@ function App() {
             techStack={['React', 'TypeScript', 'Python', 'FastAPI', 'LangGraph', 'MongoDB', 'Google Cloud', 'Docker']}
             logoUrl="/logos/stealth.jpg"
             isCurrent={true}
-            companyUrl="https://example.com"
           />
 
           <ExperienceCard
