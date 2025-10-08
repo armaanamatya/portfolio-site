@@ -48,24 +48,14 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   const getProjectDetails = (project: Project) => {
     const details: { [key: number]: { fullDescription: string; features: string[]; challenges: string[]; learnings: string[] } } = {
       1: {
-        fullDescription: "A comprehensive agentic AI-powered data analysis platform built with a multi-node LangGraph architecture. This platform enables real-time data processing and analysis with intelligent agent coordination.",
+        fullDescription: "An alternative to FL Studio",
         features: [
-          "Multi-node LangGraph architecture for complex data workflows",
-          "Real-time WebSocket updates for live data streaming", 
-          "React 18 frontend with TypeScript for type safety",
-          "Asynchronous FastAPI backend for high performance",
-          "shadcn/ui components for modern UI design"
+          
         ],
         challenges: [
-          "Implementing real-time agent coordination across multiple nodes",
-          "Optimizing WebSocket connections for large data streams",
-          "Managing complex state between frontend and backend agents"
+          
         ],
-        learnings: [
-          "Advanced LangGraph patterns for agent orchestration",
-          "Real-time data streaming optimization techniques",
-          "Modern React patterns with TypeScript integration"
-        ]
+        learnings: [       ]
       },
       2: {
         fullDescription: "An AI-based education platform specifically designed for MCAT preparation, serving over 1,000 university students with personalized learning experiences and comprehensive analytics.",

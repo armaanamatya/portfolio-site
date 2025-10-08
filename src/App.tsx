@@ -23,7 +23,7 @@ function App() {
         <div className="about-section">
           <h2 className="section-title">About</h2>
           <p className="about-description">
-            I'm a 4th-year Computer Science and Math student at the University of Houston with a passion for building and breaking stuff (mostly breaking). Been committing most of my time to being a Fullstack AI Engineer, from handling frontend UI to serving AI software from the backend. This has allowed me to grow into a more effective engineer with experience and knowledge spanning all areas of tech.
+            I'm a 4th-year Computer Science and Math student at the University of Houston into building and breaking stuff (mostly breaking). Been committing most of my time to being a Fullstack AI Engineer, from handling frontend UI to serving AI software from the backend. This has allowed me to grow into a more effective engineer with experience and knowledge spanning all areas of tech.
           </p>
         </div>
 
@@ -47,51 +47,46 @@ function App() {
         <div className="experience-section">
           <h2 className="section-title">EXPERIENCE</h2>
           <ExperienceCard
-            title="Fullstack Software Engineer"
+            title="Fullstack AI Software Engineer"
             company="AI Agent Stealth Startup"
             location="Remote"
             period="May 2025 - Present"
             description={[
-              "Led the development of an agentic, AI-powered data analysis platform leveraging a multi-node LangGraph architecture",
-              "Built a full-stack web application with React 18 and TypeScript frontend using shadcn/ui components",
-              "Developed an asynchronous FastAPI backend with WebSocket support for real-time updates and AI agent communication",
-              "Implemented advanced state management and orchestrated complex AI workflows for data processing"
+              "Owned the end-to-end development of an Agentic Data Analysis platform for Ecommerce Stores, architecting a multi-agent system with Google ADK and LangGraph to automate repetitive data analysis tasks, saving 10+ hours weekly",
+              "Developed a full-stack web app with React 18, TypeScript, and FastAPI, using MongoDB and GCP; deployed via Docker on GCP with 99.9% uptime, handling 1,000+ daily records",
+              "Orchestrated context engineering, reducing hallucinations by 50% and boosting multi-step task completion rates by 30%"
             ]}
-            techStack={['React', 'TypeScript', 'Python', 'FastAPI']}
+            techStack={['React', 'TypeScript', 'Python', 'FastAPI', 'LangGraph', 'MongoDB', 'Google Cloud', 'Docker']}
             logoUrl="/logos/stealth.jpg"
             isCurrent={true}
-            companyUrl="https://example.com"
           />
 
           <ExperienceCard
             title="Machine Learning Research Intern"
             company="Algoverse"
             location="Remote"
-            period="Aug 2024 - Present"
+            period="Aug 2025 - Present"
             description={[
-              "Collaborated with researchers from Stanford, Berkeley, and Vanderbilt on scholarly paper exploring LLMs",
-              "Conducted research on agentic capabilities and emergent behaviors in large language models",
-              "Contributed to experimental design and data analysis for AI safety and alignment research",
-              "Published findings in peer-reviewed conferences and journals"
+              "Researching causal representation learning methods, aimed for submission to ICLR 2025 Workshops",
+              "Prototyped novel attention mechanisms in PyTorch for parameter-efficient fine-tuning on domain-specific datasets, achieving measurable performance gains over baseline LLaMA models",
+              "Designed robust data preprocessing pipelines for multi-modal research datasets (text, protein sequences, vision) and refactored prototype research codebases into modular, reproducible repositories with CI/CD, enabling paper-ready experiments"
             ]}
-            techStack={['Python', 'PyTorch']}
+            techStack={['Python', 'PyTorch', 'LLaMA', 'CI/CD']}
             logoUrl="/logos/algoverse.jpg"
             isCurrent={true}
-            companyUrl="https://algoverse.ai"
+            companyUrl="https://algoverseairesearch.org"
           />
 
           <ExperienceCard
-            title="Software Engineer"
+            title="Software Engineering Lead"
             company="MyMCAT.ai"
             location="Houston, TX"
             period="Aug 2024 - Apr 2025"
             description={[
-              "Led development of AI-based education platform serving 1,000+ university students preparing for MCAT",
-              "Built scalable frontend and backend using NextJS and TypeScript with optimized performance",
-              "Implemented Prisma ORM with Supabase database for efficient data management and real-time updates",
-              "Designed and developed adaptive learning algorithms to personalize student study experiences"
+              "Collaborated with a team to build an AI-driven MCAT prep platform serving 1,000+ students, gamifying learning through AI personalization",
+              "Developed an intelligent tutoring system with NextJS, TypeScript, and Supabase"
             ]}
-            techStack={['Next.js', 'TypeScript', 'Prisma', 'Supabase', 'React', 'Node.js']}
+            techStack={['Next.js', 'TypeScript', 'Supabase', 'AI']}
             logoUrl="/logos/mymcat.jpg"
             companyUrl="https://mymcat.ai"
           />
@@ -102,12 +97,10 @@ function App() {
             location="New York, NY"
             period="May 2024 - Aug 2024"
             description={[
-              "Engineered Large Language Models including BERT and Attention Models for software requirement analysis",
-              "Developed ML pipeline to automatically generate accurate dependency lists from project requirements",
-              "Improved project planning efficiency by 37% through automated requirement parsing and analysis",
-              "Implemented model fine-tuning and evaluation frameworks for domain-specific NLP tasks"
+              "Built a Python NLP pipeline with scikit-learn, spaCy, and NLTK, productionized with Flask to analyze 1200+ software engineering requirements, saving the company $2000 annually by decreasing project lead times",
+              "Engineered BERT-based dependency extraction for requirement lists, improving project planning efficiency by 37%"
             ]}
-            techStack={['Python', 'PyTorch', 'scikit-learn']}
+            techStack={['Python', 'scikit-learn', 'spaCy', 'NLTK', 'Flask', 'BERT']}
             logoUrl="/logos/fuse.jpg"
             companyUrl="https://fusemachines.com"
           />
@@ -118,12 +111,10 @@ function App() {
             location="Remote"
             period="May 2023 - Aug 2023"
             description={[
-              "Engineered high-performance RESTful APIs using Java Spring Boot, reducing request latency by 50%",
-              "Implemented secure and stateless user authentication system with Spring Security and JWT tokens",
-              "Optimized database queries and implemented caching strategies for improved application performance",
-              "Collaborated with cross-functional teams to deliver scalable enterprise software solutions"
+              "Optimized REST APIs in Java Spring Boot for an investment platform, reducing latency by 50% through query optimization and caching",
+              "Implemented a secure, stateless authentication system in Spring Boot with Spring Security and JWT, integrated with Supabase, and validated using Postman"
             ]}
-            techStack={['Java', 'Spring Boot', 'MySQL', 'Redis']}
+            techStack={['Java', 'Spring Boot', 'Spring Security', 'JWT', 'Supabase', 'Postman']}
             logoUrl="/logos/f1soft.jpg"
             companyUrl="https://f1soft.com"
           />
@@ -183,7 +174,7 @@ function App() {
             <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.855l9.615-7.034h.749c.904 0 1.636.732 1.636 1.636z"/>
           </svg>
         </a>
-        <div className="toolbar-separator"></div>
+        {/* <div className="toolbar-separator"></div>
         <button 
           className="toolbar-btn theme-btn" 
           title="Toggle theme"
@@ -191,7 +182,7 @@ function App() {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M21.64 13a1 1 0 0 0-1.05-.14 8.05 8.05 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.79 9.79 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32z"/>
           </svg>
-        </button>
+        </button> */}
       </div>
 
       {/* Bottom Fade Effect */}

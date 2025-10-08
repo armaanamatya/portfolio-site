@@ -18,14 +18,7 @@ function Education() {
       degree: "Bachelor's Degree of Computer Science",
       period: "Aug 2024 - Dec 2025",
       iconUrl: "/uh.jpg",
-      details: [
-        "Pursuing Bachelor's degree in Computer Science with focus on full-stack development",
-        "Completed coursework in Data Structures, Algorithms, Database Systems, and Software Engineering",
-        "Maintained strong academic performance while working on real-world projects and internships",
-        "Participated in coding competitions and hackathons to enhance practical skills"
-      ],
-      techStack: ["Computer Science", "Software Engineering", "Data Structures", "Algorithms"],
-      companyUrl: "https://uh.edu",
+      techStack: ["Data Structures & Algorithms", "Database Systems", "Software Engineering", "Machine Learning", "Computer Networks", "Operating Systems"],
       isCurrent: true
     }
   ];
