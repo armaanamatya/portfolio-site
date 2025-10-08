@@ -174,7 +174,7 @@ function App() {
             <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.855l9.615-7.034h.749c.904 0 1.636.732 1.636 1.636z"/>
           </svg>
         </a>
-        <div className="toolbar-separator"></div>
+        {/* <div className="toolbar-separator"></div>
         <button 
           className="toolbar-btn theme-btn" 
           title="Toggle theme"
@@ -182,7 +182,7 @@ function App() {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M21.64 13a1 1 0 0 0-1.05-.14 8.05 8.05 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.79 9.79 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32z"/>
           </svg>
-        </button>
+        </button> */}
       </div>
 
       {/* Bottom Fade Effect */}
