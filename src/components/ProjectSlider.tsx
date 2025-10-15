@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './ProjectSlider.css';
 import ProjectModal from './ProjectModal';
 
@@ -40,6 +40,14 @@ const projects: Project[] = [
     liveUrl: "https://mymcat.ai",
     // githubUrl: "#"
   },
+  {
+    id: 3,
+    title: "JobTool",
+    description: "A personal tool for job application automation and tracking (Working on chrome extension)",
+    image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSIjMDAwMDAwIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTI1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Xb3JrSW5Qcm9nPC90ZXh0Pgo8L3N2Zz4K",
+    techStack: ['React', 'TypeScript', 'Node.js','Express.js', 'MongoDB'],
+    githubUrl: "https://github.com/armaanamatya/jobtool"
+  },
   // {
   //   id: 3,
   //   title: "LLM Research Paper",
@@ -63,6 +71,7 @@ function ProjectSlider() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const cardsPerView = 3;
+  const descriptionRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
   const nextSlide = () => {
     setStartIndex((prevIndex) => 
@@ -90,6 +99,21 @@ function ProjectSlider() {
     setSelectedProject(null);
   };
 
+  // Function to check if text is truncated
+  const checkTruncation = (element: HTMLParagraphElement | null) => {
+    if (element) {
+      const isTruncated = element.scrollHeight > element.clientHeight;
+      element.setAttribute('data-truncated', isTruncated.toString());
+    }
+  };
+
+  // Check truncation when component mounts or when visible projects change
+  useEffect(() => {
+    descriptionRefs.current.forEach(element => {
+      if (element) checkTruncation(element);
+    });
+  }, [startIndex]);
+
   return (
     <div className="projects-section">
       <h2 className="section-title">PROJECTS</h2>
@@ -115,7 +139,18 @@ function ProjectSlider() {
               </div>
               <div className="project-content-compact">
                 <h3 className="project-title-compact">{project.title}</h3>
-                <p className="project-description-compact">{project.description}</p>
+                <p 
+                  className="project-description-compact"
+                  ref={(el) => {
+                    descriptionRefs.current[index] = el;
+                    if (el) {
+                      // Check truncation after the element is rendered
+                      setTimeout(() => checkTruncation(el), 0);
+                    }
+                  }}
+                >
+                  {project.description}
+                </p>
                 <div className="project-bottom">
                   <div className="project-links-bottom">
                     {project.liveUrl && (
