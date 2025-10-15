@@ -100,7 +100,7 @@ function ProjectSlider() {
   };
 
   // Function to check if text is truncated
-  const checkTruncation = (element: HTMLParagraphElement) => {
+  const checkTruncation = (element: HTMLParagraphElement | null) => {
     if (element) {
       const isTruncated = element.scrollHeight > element.clientHeight;
       element.setAttribute('data-truncated', isTruncated.toString());
@@ -109,7 +109,9 @@ function ProjectSlider() {
 
   // Check truncation when component mounts or when visible projects change
   useEffect(() => {
-    descriptionRefs.current.forEach(checkTruncation);
+    descriptionRefs.current.forEach(element => {
+      if (element) checkTruncation(element);
+    });
   }, [startIndex]);
 
   return (

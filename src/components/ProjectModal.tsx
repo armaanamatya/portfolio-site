@@ -60,21 +60,21 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
       2: {
         fullDescription: "An AI-based education platform specifically designed for MCAT preparation, serving over 1,000 university students with personalized learning experiences and comprehensive analytics.",
         features: [
-          "Personalized MCAT study plans using AI algorithms",
-          "Comprehensive analytics dashboard for progress tracking",
+          // "Personalized MCAT study plans using AI algorithms",
+          // "Comprehensive analytics dashboard for progress tracking",
           // "Next.js full-stack architecture for optimal performance",
           // "Prisma ORM for type-safe database operations",
           // "Supabase integration for real-time data synchronization"
         ],
         challenges: [
-          "Scaling the platform to handle 1,000+ concurrent users",
-          "Implementing personalized AI-driven study recommendations",
-          "Building comprehensive analytics while maintaining performance"
+          // "Scaling the platform to handle 1,000+ concurrent users",
+          // "Implementing personalized AI-driven study recommendations",
+          // "Building comprehensive analytics while maintaining performance"
         ],
         learnings: [
-          "Large-scale application architecture and optimization",
-          "AI-driven personalization algorithms",
-          "Database design for educational platforms"
+          // "Large-scale application architecture and optimization",
+          // "AI-driven personalization algorithms",
+          // "Database design for educational platforms"
         ]
       },
       3: {

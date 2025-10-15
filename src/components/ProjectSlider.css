@@ -124,11 +124,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-<<<<<<< Updated upstream
   flex: 1;
-=======
-<<<<<<< Updated upstream
-=======
   flex: 1;
   position: relative;
 }
@@ -150,8 +146,6 @@
 /* Show fade effect only when text is actually truncated */
 .project-description-compact[data-truncated="true"]::after {
   opacity: 1;
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 }
 
 .project-bottom {
