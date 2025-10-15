@@ -125,6 +125,27 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+/* Add fade effect only when text is truncated */
+.project-description-compact::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.2em; /* Height of one line of text */
+  background: linear-gradient(transparent, rgba(26, 26, 26, 0.8));
+  pointer-events: none;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.2s ease;
+}
+
+/* Show fade effect only when text is actually truncated */
+.project-description-compact[data-truncated="true"]::after {
+  opacity: 1;
 }
 
 .project-bottom {

@@ -155,8 +155,10 @@
 
 .project-modal-tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 0.75rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .project-modal-tech-item {
@@ -168,6 +170,8 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.375rem;
   transition: all 0.3s ease;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .project-modal-tech-item:hover {
@@ -186,6 +190,10 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .project-modal-notes {

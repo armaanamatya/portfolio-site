@@ -23,7 +23,7 @@ function App() {
         <div className="about-section">
           <h2 className="section-title">About</h2>
           <p className="about-description">
-            I'm a 4th-year Computer Science and Math student at the University of Houston into building and breaking stuff (mostly breaking). Been committing most of my time to being a Fullstack AI Engineer, from handling frontend UI to serving AI software from the backend. This has allowed me to grow into a more effective engineer with experience and knowledge spanning all areas of tech.
+            I'm a Senior Computer Science and Math student at the University of Houston into IoT and agentic systems. React out if you want to connect or work together, always starving for new ideas!
           </p>
         </div>
 
@@ -172,6 +172,17 @@ function App() {
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.855l9.615-7.034h.749c.904 0 1.636.732 1.636 1.636z"/>
+          </svg>
+        </a>
+        <div className="toolbar-separator"></div>
+        <a 
+          href="/Armaan-Amatya-Resume.pdf" 
+          download="Armaan-Amatya-Resume.pdf"
+          className="toolbar-btn"
+          title="Download Resume"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
           </svg>
         </a>
         {/* <div className="toolbar-separator"></div>
