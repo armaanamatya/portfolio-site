@@ -23,7 +23,7 @@ function App() {
         <div className="about-section">
           <h2 className="section-title">About</h2>
           <p className="about-description">
-            I'm a 4th-year Computer Science and Math student at the University of Houston into building and breaking stuff (mostly breaking). Been committing most of my time to being a Fullstack AI Engineer, from handling frontend UI to serving AI software from the backend. This has allowed me to grow into a more effective engineer with experience and knowledge spanning all areas of tech.
+            I'm a Senior Computer Science and Math student at the University of Houston into IoT and agentic systems. React out if you want to connect or work together, always starving for new ideas!
           </p>
         </div>
 
