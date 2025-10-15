@@ -62,9 +62,9 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         features: [
           "Personalized MCAT study plans using AI algorithms",
           "Comprehensive analytics dashboard for progress tracking",
-          "Next.js full-stack architecture for optimal performance",
-          "Prisma ORM for type-safe database operations",
-          "Supabase integration for real-time data synchronization"
+          // "Next.js full-stack architecture for optimal performance",
+          // "Prisma ORM for type-safe database operations",
+          // "Supabase integration for real-time data synchronization"
         ],
         challenges: [
           "Scaling the platform to handle 1,000+ concurrent users",
@@ -78,24 +78,28 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         ]
       },
       3: {
-        fullDescription: "Collaborative research project with researchers from Stanford, Berkeley, and Vanderbilt universities, exploring the cutting-edge capabilities of Large Language Models and their agentic behaviors.",
+        fullDescription: "A personal tool for job application automation and tracking (Working on chrome extension)",
         features: [
-          "Multi-university collaborative research framework",
-          "Advanced LLM capability analysis and benchmarking",
-          "Agentic behavior pattern identification and documentation",
-          "Research methodology development for LLM evaluation",
-          "Academic paper publication and peer review process"
         ],
         challenges: [
-          "Coordinating research across multiple prestigious institutions",
-          "Developing novel evaluation metrics for agentic capabilities",
-          "Managing large-scale LLM experiments and data collection"
         ],
         learnings: [
-          "Academic research methodologies and collaboration",
-          "Advanced LLM architecture and behavior analysis",
-          "Scientific writing and publication processes"
         ]
+        // features: [
+        //   "Job application automation and tracking",
+        //   "Job application tracking and management",
+        //   "Job application automation and tracking",
+        // ],
+        // challenges: [
+        //   "Coordinating research across multiple prestigious institutions",
+        //   "Developing novel evaluation metrics for agentic capabilities",
+        //   "Managing large-scale LLM experiments and data collection"
+        // ],
+        // learnings: [
+        //   "Academic research methodologies and collaboration",
+        //   "Advanced LLM architecture and behavior analysis",
+        //   "Scientific writing and publication processes"
+        // ]
       },
       4: {
         fullDescription: "High-performance RESTful API system built with Java Spring Boot, achieving a 50% reduction in request latency through optimized architecture and secure JWT authentication implementation.",
@@ -172,6 +176,8 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   'React': 'react',
                   'TypeScript': 'ts',
                   'Python': 'python',
+                  'PyQT': 'python',
+                  'Demucs': 'python',
                   'FastAPI': 'fastapi',
                   'LangGraph': 'python',
                   'Next.js': 'nextjs',
@@ -180,7 +186,10 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   'PyTorch': 'pytorch',
                   'Java': 'java',
                   'Spring Boot': 'spring',
-                  'PostgreSQL': 'postgres'
+                  'PostgreSQL': 'postgres',
+                  'Node.js': 'nodejs',
+                  'Express.js': 'express',
+                  'MongoDB': 'mongodb'
                 };
                 
                 const iconName = techMap[tech] || tech.toLowerCase();
