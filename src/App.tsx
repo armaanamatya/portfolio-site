@@ -5,12 +5,15 @@ import Certificates from './components/Certificates'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import ProjectSlider from './components/ProjectSlider'
+import HackathonSlider from './components/HackathonSlider'
+import ScrollWheel from './components/ScrollWheel'
+import SectionTags from './components/SectionTags'
 
 function App() {
   return (
     <div className="portfolio">
       <main className="main-content">
-        <div className="hero-section">
+        <div className="hero-section" id="hero">
           <div className="hero-content">
             <div className="profile-image">
               <img src="/IMG_1854.jpg" alt="Armaan Amatya" />
@@ -20,14 +23,24 @@ function App() {
           </div>
         </div>
 
-        <div className="about-section">
+        <div className="about-section" id="about">
           <h2 className="section-title">About</h2>
+          <SectionTags sections={[
+            { id: 'about', label: 'About' },
+            { id: 'what-im-up-to', label: "What I'm Up To" },
+            { id: 'experience', label: 'Experience' },
+            { id: 'certificates', label: 'Certificates' },
+            { id: 'education', label: 'Education' },
+            { id: 'skills', label: 'Skills' },
+            { id: 'projects', label: 'Projects' },
+            { id: 'hackathons', label: 'Hackathons' }
+          ]} />
           <p className="about-description">
             I'm a Senior Computer Science and Math student at the University of Houston into IoT and agentic systems. React out if you want to connect or work together, always starving for new ideas!
           </p>
         </div>
 
-        <div className="what-im-up-to-section">
+        <div className="what-im-up-to-section" id="what-im-up-to">
           <h2 className="section-title">What I'm Up To</h2>
           <ul className="up-to-list">
             <li>
@@ -44,7 +57,7 @@ function App() {
           </ul>
         </div>
 
-        <div className="experience-section">
+        <div className="experience-section" id="experience">
           <h2 className="section-title">EXPERIENCE</h2>
           <ExperienceCard
             title="Fullstack AI Software Engineer"
@@ -120,13 +133,24 @@ function App() {
           />
         </div>
 
-        <Certificates />
+        <div id="certificates">
+          <Certificates />
+        </div>
         
-        <Education />
+        <div id="education">
+          <Education />
+        </div>
         
-        <Skills />
+        <div id="skills">
+          <Skills />
+        </div>
         
-        <ProjectSlider />
+        <div id="projects">
+          <ProjectSlider />
+        </div>
+        <div id="hackathons">
+          <HackathonSlider />
+        </div>
       </main>
 
       {/* Bottom Toolbar */}
@@ -196,6 +220,7 @@ function App() {
         </button> */}
       </div>
 
+      <ScrollWheel />
       {/* Bottom Fade Effect */}
       <div className="bottom-fade"></div>
     </div>

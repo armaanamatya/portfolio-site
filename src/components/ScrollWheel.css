@@ -1,0 +1,73 @@
+.scroll-wheel {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+  padding: 8px 10px;
+}
+
+.wheel-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wheel-item {}
+
+.wheel-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 999px;
+  transition: background 160ms ease, transform 160ms ease, opacity 160ms ease;
+  opacity: 0.8;
+}
+
+.wheel-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 1;
+}
+
+.wheel-item.active .wheel-button {
+  background: rgba(255, 255, 255, 0.12);
+  opacity: 1;
+}
+
+.wheel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #bbb;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.wheel-item.active .wheel-dot {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+.wheel-label {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .scroll-wheel {
+    display: none;
+  }
+}
+
+
