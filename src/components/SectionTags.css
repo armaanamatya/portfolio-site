@@ -1,0 +1,28 @@
+.section-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 8px 0;
+}
+
+.section-tag {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  transition: background 160ms ease, transform 120ms ease;
+}
+
+.section-tag:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.section-tag:active {
+  transform: translateY(1px);
+}
+
+
