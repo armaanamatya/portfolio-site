@@ -15,7 +15,7 @@ function ScrollWheel() {
     { id: 'education', label: 'Education' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
-    { id: 'hackathons', label: 'Hackathons' }
+    // { id: 'hackathons', label: 'Hackathons' }
   ], []);
 
   const [activeId, setActiveId] = useState<string>('about');

@@ -5,7 +5,7 @@ import Certificates from './components/Certificates'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import ProjectSlider from './components/ProjectSlider'
-import HackathonSlider from './components/HackathonSlider'
+// import HackathonSlider from './components/HackathonSlider'
 import ScrollWheel from './components/ScrollWheel'
 import SectionTags from './components/SectionTags'
 
@@ -32,8 +32,8 @@ function App() {
             { id: 'certificates', label: 'Certificates' },
             { id: 'education', label: 'Education' },
             { id: 'skills', label: 'Skills' },
-            { id: 'projects', label: 'Projects' },
-            { id: 'hackathons', label: 'Hackathons' }
+            { id: 'projects', label: 'Projects' }
+            // { id: 'hackathons', label: 'Hackathons' }
           ]} />
           <p className="about-description">
             I'm a Senior Computer Science and Math student at the University of Houston into IoT and agentic systems. React out if you want to connect or work together, always starving for new ideas!
@@ -148,9 +148,9 @@ function App() {
         <div id="projects">
           <ProjectSlider />
         </div>
-        <div id="hackathons">
+        {/* <div id="hackathons">
           <HackathonSlider />
-        </div>
+        </div> */}
       </main>
 
       {/* Bottom Toolbar */}
