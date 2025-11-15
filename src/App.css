@@ -56,10 +56,11 @@
 
 .profile-image img {
   width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
+  height: auto;
+  border-radius: 2px;
+  object-fit: contain;
   border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6), 0 0 16px rgba(0, 0, 0, 0.3);
 }
 
 .hero-intro {

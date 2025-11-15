@@ -7,7 +7,6 @@ import Skills from './components/Skills'
 import ProjectSlider from './components/ProjectSlider'
 // import HackathonSlider from './components/HackathonSlider'
 import ScrollWheel from './components/ScrollWheel'
-import SectionTags from './components/SectionTags'
 
 function App() {
   return (
@@ -25,16 +24,6 @@ function App() {
 
         <div className="about-section" id="about">
           <h2 className="section-title">About</h2>
-          <SectionTags sections={[
-            { id: 'about', label: 'About' },
-            { id: 'what-im-up-to', label: "What I'm Up To" },
-            { id: 'experience', label: 'Experience' },
-            { id: 'certificates', label: 'Certificates' },
-            { id: 'education', label: 'Education' },
-            { id: 'skills', label: 'Skills' },
-            { id: 'projects', label: 'Projects' }
-            // { id: 'hackathons', label: 'Hackathons' }
-          ]} />
           <p className="about-description">
             I'm a Senior Computer Science and Math student at the University of Houston into IoT and agentic systems. React out if you want to connect or work together, always starving for new ideas!
           </p>
