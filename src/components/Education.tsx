@@ -16,7 +16,7 @@ function Education() {
     {
       institution: "University of Houston",
       degree: "Bachelor's Degree of Computer Science",
-      period: "Aug 2024 - Dec 2025",
+      period: "Aug 2024 - Dec 2026",
       iconUrl: "/uh.jpg",
       techStack: ["Data Structures & Algorithms", "Database Systems", "Software Engineering", "Machine Learning", "Computer Networks", "Operating Systems"],
       isCurrent: true

@@ -25,7 +25,7 @@ function App() {
         <div className="about-section" id="about">
           <h2 className="section-title">About</h2>
           <p className="about-description">
-            I'm a Senior Computer Science and Math student at the University of Houston into IoT and agentic systems. React out if you want to connect or work together, always starving for new ideas!
+            I'm a Senior Computer Science and Math student at the University of Houston into IoT and agentic systems. Reach out if you want to connect or work together! Always starving for new ideas!
           </p>
         </div>
 
