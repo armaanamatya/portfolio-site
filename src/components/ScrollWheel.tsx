@@ -10,9 +10,9 @@ function ScrollWheel() {
   const sections: SectionItem[] = useMemo(() => [
     { id: 'about', label: 'About' },
     { id: 'what-im-up-to', label: "What I'm Up To" },
+    { id: 'education', label: 'Education' },
     { id: 'experience', label: 'Experience' },
     { id: 'certificates', label: 'Certificates' },
-    { id: 'education', label: 'Education' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     // { id: 'hackathons', label: 'Hackathons' }

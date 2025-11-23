@@ -7,6 +7,7 @@ import Skills from './components/Skills'
 import ProjectSlider from './components/ProjectSlider'
 // import HackathonSlider from './components/HackathonSlider'
 import ScrollWheel from './components/ScrollWheel'
+import HighlightWidget from './components/HighlightWidget'
 
 function App() {
   return (
@@ -24,26 +25,43 @@ function App() {
 
         <div className="about-section" id="about">
           <h2 className="section-title">About</h2>
-          <p className="about-description">
-            I'm a Senior Computer Science and Math student at the University of Houston into IoT and agentic systems. Reach out if you want to connect or work together! Always starving for new ideas!
-          </p>
+          <ul className="about-list">
+            <li>
+              <strong>Software Engineer:</strong> Building scalable full-stack applications and agentic systems. Experienced in React, Python, and Cloud Architecture.
+            </li>
+            <li>
+              <strong>AI Researcher:</strong> Exploring Large Language Models, Reinforcement Learning, and Multi-Agent Systems. Focused on practical applications of AI.
+            </li>
+            <li>
+              <strong>Problem Solver:</strong> Passionate about understanding systems from first principles. Always learning and adapting to new technologies and challenges.
+            </li>
+          </ul>
         </div>
 
         <div className="what-im-up-to-section" id="what-im-up-to">
           <h2 className="section-title">What I'm Up To</h2>
-          <ul className="up-to-list">
-            <li>
-              Exploring fine-tuning a model for financial stock analysis, learning from the LLM and RL courses on HF: 
-              <a href="https://huggingface.co/learn/llm-course/chapter1/1" target="_blank" rel="noopener noreferrer" className="course-link">LLM Course</a> and 
-              <a href="https://huggingface.co/learn/deep-rl-course/unit0/introduction" target="_blank" rel="noopener noreferrer" className="course-link">Deep RL Course</a>
-            </li>
-            <li>
-              Designing and implementing a Multi-Agent System to optimize workflows for E-commerce platforms
-            </li>
-            <li>
-              Making (trying to make...) a database and network server in C/C++ from scratch to gain a deeper understanding of low-level systems
-            </li>
-          </ul>
+          <div className="widgets-grid">
+            <HighlightWidget 
+              title="Financial Analysis Model" 
+              description={
+                <>
+                  Fine-tuning models for stock analysis using LLMs and RL. Learning from <a href="https://huggingface.co/learn/llm-course/chapter1/1" target="_blank" rel="noopener noreferrer" className="course-link">HF LLM Course</a> and <a href="https://huggingface.co/learn/deep-rl-course/unit0/introduction" target="_blank" rel="noopener noreferrer" className="course-link">Deep RL Course</a>.
+                </>
+              }
+            />
+            <HighlightWidget 
+              title="Multi-Agent Systems" 
+              description="Designing and implementing autonomous agent workflows to optimize operations for E-commerce platforms."
+            />
+            <HighlightWidget 
+              title="Systems Programming" 
+              description="Building a database and network server from scratch in C/C++ to deepen understanding of low-level system architecture."
+            />
+          </div>
+        </div>
+
+        <div id="education">
+          <Education />
         </div>
 
         <div className="experience-section" id="experience">
@@ -124,10 +142,6 @@ function App() {
 
         <div id="certificates">
           <Certificates />
-        </div>
-        
-        <div id="education">
-          <Education />
         </div>
         
         <div id="skills">

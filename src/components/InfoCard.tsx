@@ -11,6 +11,7 @@ interface InfoCardProps {
   companyUrl?: string;
   isCurrent?: boolean;
   isExpandable?: boolean;
+  techStackTitle?: string;
 }
 
 function InfoCard({ 
@@ -22,7 +23,8 @@ function InfoCard({
   techStack,
   companyUrl,
   isCurrent,
-  isExpandable = true
+  isExpandable = true,
+  techStackTitle
 }: InfoCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -79,10 +81,13 @@ function InfoCard({
           )}
           
           {techStack && techStack.length > 0 && (
-            <div className="tech-stack">
-              {techStack.map((tech, index) => (
-                <span key={index} className="tech-badge">{tech}</span>
-              ))}
+            <div className="tech-stack-container">
+              {techStackTitle && <div className="tech-stack-title">{techStackTitle}</div>}
+              <div className="tech-stack">
+                {techStack.map((tech, index) => (
+                  <span key={index} className="tech-badge">{tech}</span>
+                ))}
+              </div>
             </div>
           )}
           
