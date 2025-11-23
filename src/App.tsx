@@ -7,7 +7,6 @@ import Skills from './components/Skills'
 import ProjectSlider from './components/ProjectSlider'
 // import HackathonSlider from './components/HackathonSlider'
 import ScrollWheel from './components/ScrollWheel'
-import HighlightWidget from './components/HighlightWidget'
 
 function App() {
   return (
@@ -27,37 +26,30 @@ function App() {
           <h2 className="section-title">About</h2>
           <ul className="about-list">
             <li>
-              <strong>Software Engineer:</strong> Building scalable full-stack applications and agentic systems. Experienced in React, Python, and Cloud Architecture.
+              Software Engineer with expertise in AI and Full-stack development
             </li>
             <li>
-              <strong>AI Researcher:</strong> Exploring Large Language Models, Reinforcement Learning, and Multi-Agent Systems. Focused on practical applications of AI.
+              Doing research in vision models
             </li>
             <li>
-              <strong>Problem Solver:</strong> Passionate about understanding systems from first principles. Always learning and adapting to new technologies and challenges.
+              Driven by curiosity, problem-solving, and understanding systems from the ground up - always eager to work on ambitious things, so reach out!
             </li>
           </ul>
         </div>
 
         <div className="what-im-up-to-section" id="what-im-up-to">
           <h2 className="section-title">What I'm Up To</h2>
-          <div className="widgets-grid">
-            <HighlightWidget 
-              title="Financial Analysis Model" 
-              description={
-                <>
-                  Fine-tuning models for stock analysis using LLMs and RL. Learning from <a href="https://huggingface.co/learn/llm-course/chapter1/1" target="_blank" rel="noopener noreferrer" className="course-link">HF LLM Course</a> and <a href="https://huggingface.co/learn/deep-rl-course/unit0/introduction" target="_blank" rel="noopener noreferrer" className="course-link">Deep RL Course</a>.
-                </>
-              }
-            />
-            <HighlightWidget 
-              title="Multi-Agent Systems" 
-              description="Designing and implementing autonomous agent workflows to optimize operations for E-commerce platforms."
-            />
-            <HighlightWidget 
-              title="Systems Programming" 
-              description="Building a database and network server from scratch in C/C++ to deepen understanding of low-level system architecture."
-            />
-          </div>
+          <ul className="up-to-list">
+            <li>
+              Building a B2B SaaS to optimize workflows for E-commerce platforms
+            </li>
+            <li>
+              Messing around with Jetson Orin for some Edge-AI Inferencing
+            </li>
+            <li>
+              Building <a href="https://insidersignal.ai/" target="_blank" rel="noopener noreferrer" className="course-link">Insider Signal</a> to disrupt markets
+            </li>
+          </ul>
         </div>
 
         <div id="education">
