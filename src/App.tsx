@@ -24,26 +24,36 @@ function App() {
 
         <div className="about-section" id="about">
           <h2 className="section-title">About</h2>
-          <p className="about-description">
-            I'm a Senior Computer Science and Math student at the University of Houston into IoT and agentic systems. Reach out if you want to connect or work together! Always starving for new ideas!
-          </p>
+          <ul className="about-list">
+            <li>
+              Software Engineer with expertise in AI and Full-stack development
+            </li>
+            <li>
+              Doing research in vision models
+            </li>
+            <li>
+              Driven by curiosity, problem-solving, and understanding systems from the ground up - always eager to work on ambitious things, so reach out!
+            </li>
+          </ul>
         </div>
 
         <div className="what-im-up-to-section" id="what-im-up-to">
           <h2 className="section-title">What I'm Up To</h2>
           <ul className="up-to-list">
             <li>
-              Exploring fine-tuning a model for financial stock analysis, learning from the LLM and RL courses on HF: 
-              <a href="https://huggingface.co/learn/llm-course/chapter1/1" target="_blank" rel="noopener noreferrer" className="course-link">LLM Course</a> and 
-              <a href="https://huggingface.co/learn/deep-rl-course/unit0/introduction" target="_blank" rel="noopener noreferrer" className="course-link">Deep RL Course</a>
+              Building a B2B SaaS to optimize workflows for E-commerce platforms
             </li>
             <li>
-              Designing and implementing a Multi-Agent System to optimize workflows for E-commerce platforms
+              Messing around with Jetson Orin for some Edge-AI Inferencing
             </li>
             <li>
-              Making (trying to make...) a database and network server in C/C++ from scratch to gain a deeper understanding of low-level systems
+              Building <a href="https://insidersignal.ai/" target="_blank" rel="noopener noreferrer" className="course-link">Insider Signal</a> to disrupt markets
             </li>
           </ul>
+        </div>
+
+        <div id="education">
+          <Education />
         </div>
 
         <div className="experience-section" id="experience">
@@ -124,10 +134,6 @@ function App() {
 
         <div id="certificates">
           <Certificates />
-        </div>
-        
-        <div id="education">
-          <Education />
         </div>
         
         <div id="skills">

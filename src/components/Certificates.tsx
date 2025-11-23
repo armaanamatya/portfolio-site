@@ -26,13 +26,13 @@ function Certificates() {
       iconUrl: "/udemy.jpg",
       companyUrl: "https://www.udemy.com/certificate/UC-afdb1f34-f12c-4ede-80b6-ac1c9787c4be/"
     },
-    {
-      title: "Convolutional Neural Networks",
-      issuer: "DeepLearning.AI",
-      issueDate: "Jul 2024",
-      iconUrl: "https://skillicons.dev/icons?i=tensorflow&theme=dark",
-      companyUrl: "#"
-    }
+    // {
+    //   title: "Convolutional Neural Networks",
+    //   issuer: "DeepLearning.AI",
+    //   issueDate: "Jul 2024",
+    //   iconUrl: "https://skillicons.dev/icons?i=tensorflow&theme=dark",
+    //   companyUrl: "#"
+    // }
   ];
 
   return (
