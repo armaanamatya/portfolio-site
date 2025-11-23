@@ -171,12 +171,25 @@
   margin-bottom: 0;
 }
 
+.tech-stack-container {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tech-stack-title {
+  font-size: 0.85rem;
+  color: #888888;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  padding-bottom: 4px;
+}
+
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
 }
 
 .tech-badge {
