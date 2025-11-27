@@ -5,6 +5,7 @@ import Certificates from './components/Certificates'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import ProjectSlider from './components/ProjectSlider'
+import HackathonWin from './components/HackathonWin'
 // import HackathonSlider from './components/HackathonSlider'
 import ScrollWheel from './components/ScrollWheel'
 
@@ -143,9 +144,45 @@ function App() {
         <div id="projects">
           <ProjectSlider />
         </div>
-        {/* <div id="hackathons">
-          <HackathonSlider />
-        </div> */}
+        
+        <div className="hackathon-section" id="hackathons">
+          <h2 className="section-title">HACKATHON WINS</h2>
+          <HackathonWin
+            title="AI-Powered Mental Health Companion"
+            eventName="HackRice 2024"
+            location="Rice University, Houston"
+            date="Sept 2024"
+            prize="1st Place Overall"
+            description={[
+              "Built an AI mental health companion that provides personalized therapy sessions and mood tracking",
+              "Implemented real-time sentiment analysis using OpenAI GPT-4 and custom emotion detection models",
+              "Created a React Native mobile app with secure user authentication and data encryption",
+              "Integrated voice recognition for hands-free interaction and accessibility features"
+            ]}
+            techStack={['React', 'Python', 'OpenAI', 'TensorFlow', 'Firebase']}
+            logoUrl="/logos/hackrice.jpg"
+            projectUrl="https://github.com/yourusername/mental-health-ai"
+            devpostUrl="https://devpost.com/software/mental-health-companion"
+          />
+          
+          <HackathonWin
+            title="Smart Campus Navigation System"
+            eventName="CougHacks 2024"
+            location="University of Houston"
+            date="Feb 2024"
+            prize="2nd Place"
+            description={[
+              "Developed an AR-based campus navigation system for visually impaired students",
+              "Implemented computer vision for real-time obstacle detection and path planning",
+              "Built a Progressive Web App with voice commands and haptic feedback",
+              "Integrated with university's existing infrastructure and accessibility services"
+            ]}
+            techStack={['React', 'Python', 'TensorFlow', 'WebRTC', 'PWA']}
+            logoUrl="/logos/coughacks.jpg"
+            projectUrl="https://github.com/yourusername/smart-campus-nav"
+            devpostUrl="https://devpost.com/software/smart-campus-navigation"
+          />
+        </div>
       </main>
 
       {/* Bottom Toolbar */}
