@@ -5,7 +5,7 @@ import Certificates from './components/Certificates'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import ProjectSlider from './components/ProjectSlider'
-// import HackathonSlider from './components/HackathonSlider'
+import Hackathons from './components/Hackathons'
 import ScrollWheel from './components/ScrollWheel'
 
 function App() {
@@ -143,9 +143,69 @@ function App() {
         <div id="projects">
           <ProjectSlider />
         </div>
-        {/* <div id="hackathons">
-          <HackathonSlider />
-        </div> */}
+        
+        <Hackathons
+          hackathonsAttended={4}
+          description="During my time in university, I attended + hackathons. People from around the country would come together and build incredible things in 2-3 days. It was eye-opening to see the endless possibilities brought to life by a group of motivated and passionate individuals."
+          projects={[
+            {
+              id: 1,
+              date: "Nov 8th - 9th, 2025",
+              eventName: "HackUTD 2025",
+              awards: [],
+              location: "University of Texas at Dallas",
+              description: "",
+              devpostUrl: "",
+              sourceUrl: "",
+              icon: "/logos/hackutd.jpg",
+              media: [
+                { type: 'image', url: '/qieimg.png', alt: 'HackUTD project screenshot' }
+              ]
+            },
+            {
+              id: 2,
+              date: "Oct 18th - 19th, 2025",
+              eventName: "CodeRed Astra",
+              awards: [],
+              location: "",
+              description: "",
+              devpostUrl: "",
+              sourceUrl: "",
+              icon: "/logos/codered.jpg",
+              media: [
+                { type: 'image', url: '/qieimg.png', alt: 'CodeRed Astra project screenshot' }
+              ]
+            },
+            {
+              id: 3,
+              date: "Sept 19th - 21st, 2025",
+              eventName: "HackRice15",
+              awards: [],
+              location: "Rice University, Houston",
+              description: "",
+              devpostUrl: "",
+              sourceUrl: "",
+              icon: "/logos/hackrice.jpg",
+              media: [
+                { type: 'image', url: '/qieimg.png', alt: 'HackRice15 project screenshot' }
+              ]
+            },
+            {
+              id: 4,
+              date: "Aug 21st - 23rd, 2025",
+              eventName: "NSA Boston",
+              awards: [],
+              location: "Boston, MA",
+              description: "",
+              devpostUrl: "",
+              sourceUrl: "",
+              icon: "/logos/nsa.jpg",
+              media: [
+                { type: 'image', url: '/qieimg.png', alt: 'NSA Boston project screenshot' }
+              ]
+            }
+          ]}
+        />
       </main>
 
       {/* Bottom Toolbar */}
