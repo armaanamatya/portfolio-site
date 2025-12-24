@@ -41,7 +41,7 @@ function App() {
           <h2 className="section-title">What I'm Up To</h2>
           <ul className="up-to-list">
             <li>
-              Building a B2B SaaS to optimize workflows for E-commerce platforms
+              Building Agents for fun
             </li>
             <li>
               Messing around with Jetson Orin for some Edge-AI Inferencing
@@ -58,6 +58,19 @@ function App() {
 
         <div className="experience-section" id="experience">
           <h2 className="section-title">EXPERIENCE</h2>
+          <ExperienceCard
+            title="Undergrad Researcher"
+            company="University of Houston"
+            location="Houston, TX"
+            period="Jan 2025 - Present"
+            description={[
+              "Researching on multimodal models for on-device inferencing"
+            ]}
+            techStack={[]}
+            logoUrl="/uh.jpg"
+            isCurrent={true}
+          />
+
           <ExperienceCard
             title="Fullstack AI Software Engineer"
             company="AI Agent Stealth Startup"
