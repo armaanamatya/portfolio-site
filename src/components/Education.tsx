@@ -18,7 +18,7 @@ function Education() {
       degree: "Bachelor's of Science in Computer Science and Mathematics",
       period: "Aug 2024 - Dec 2026",
       iconUrl: "/uh.jpg",
-      techStack: ["Data Structures & Algorithms", "Algorithm Analysis", "Database Systems", "Software Engineering", "Machine Learning", "Deep Learning", "Computer Networks", "Operating Systems"],
+      techStack: ["Data Structures & Algorithms", "Algorithm Analysis", "Database Systems", "Software Engineering", "Machine Learning", "Deep Learning", "Computer Networks", "Operating Systems", "Real-Time Embedded Systems", "Computer Vision"],
       isCurrent: true
     }
   ];
