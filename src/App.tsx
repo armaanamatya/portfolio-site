@@ -32,7 +32,7 @@ function App() {
               Software Engineer with expertise in AI and Full-stack development
             </li>
             <li>
-              Doing research in vision models
+              Doing research in token compression methods for multimodal models
             </li>
             <li>
               Driven by curiosity, problem-solving, and understanding systems from the ground up - always eager to work on ambitious things, so reach out!
@@ -44,13 +44,13 @@ function App() {
           <h2 className="section-title">What I'm Up To</h2>
           <ul className="up-to-list">
             <li>
-              Building Agents for fun
+              Building shit for fun
             </li>
             <li>
-              Messing around with Jetson Orin for some Edge-AI Inferencing
+              Reading AI papers weekly 📄
             </li>
             <li>
-              Building <a href="https://insidersignal.ai/" target="_blank" rel="noopener noreferrer" className="course-link">Insider Signal</a> to disrupt markets
+              <span className="big-red-f">F</span>ailing exams and locking in
             </li>
           </ul>
         </div>
