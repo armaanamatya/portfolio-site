@@ -12,7 +12,7 @@ function ScrollWheel() {
     { id: 'what-im-up-to', label: "What I'm Up To" },
     { id: 'education', label: 'Education' },
     { id: 'experience', label: 'Experience' },
-    { id: 'certificates', label: 'Certificates' },
+    // { id: 'certificates', label: 'Certificates' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     // { id: 'hackathons', label: 'Hackathons' }
