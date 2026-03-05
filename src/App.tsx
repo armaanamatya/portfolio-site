@@ -67,7 +67,7 @@ function App() {
             location="Houston, TX"
             period="Jan 2025 - Present"
             description={[
-              "Researching on multimodal models for on-device inferencing"
+              "Working on novel token compression methods for multimodal models"
             ]}
             techStack={[]}
             logoUrl="/uh.jpg"
