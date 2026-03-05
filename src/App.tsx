@@ -1,14 +1,17 @@
+import { useState } from 'react'
 import './App.css'
 // Updated for root directory deployment
 import ExperienceCard from './components/ExperienceCard'
-import Certificates from './components/Certificates'
+// import Certificates from './components/Certificates'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import ProjectSlider from './components/ProjectSlider'
 // import HackathonSlider from './components/HackathonSlider'
 import ScrollWheel from './components/ScrollWheel'
+import ResumeViewer from './components/ResumeViewer'
 
 function App() {
+  const [resumeViewerOpen, setResumeViewerOpen] = useState(false)
   return (
     <div className="portfolio">
       <main className="main-content">
@@ -145,9 +148,9 @@ function App() {
           />
         </div>
 
-        <div id="certificates">
+        {/* <div id="certificates">
           <Certificates />
-        </div>
+        </div> */}
         
         <div id="skills">
           <Skills />
@@ -161,74 +164,59 @@ function App() {
         </div> */}
       </main>
 
-      {/* Bottom Toolbar */}
-      <div className="bottom-toolbar">
-        <button 
-          className="toolbar-btn home-btn" 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          title="Back to top"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-          </svg>
-        </button>
-        <div className="toolbar-separator"></div>
-        <a 
-          href="https://github.com/armaanamatya" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="toolbar-btn"
-          title="GitHub"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-          </svg>
-        </a>
-        <div className="toolbar-separator"></div>
-        <a 
-          href="https://www.linkedin.com/in/armaan-amatya/" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="toolbar-btn"
-          title="LinkedIn"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-          </svg>
-        </a>
-        <div className="toolbar-separator"></div>
-        <a 
-          href="mailto:armaanamatya2014@gmail.com" 
-          className="toolbar-btn"
-          title="Email"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.855l9.615-7.034h.749c.904 0 1.636.732 1.636 1.636z"/>
-          </svg>
-        </a>
-        <div className="toolbar-separator"></div>
-        <a 
-          href="/Armaan-Amatya-Resume.pdf" 
-          download="Armaan-Amatya-Resume.pdf"
-          className="toolbar-btn"
-          title="Download Resume"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-          </svg>
-        </a>
-        {/* <div className="toolbar-separator"></div>
-        <button 
-          className="toolbar-btn theme-btn" 
-          title="Toggle theme"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M21.64 13a1 1 0 0 0-1.05-.14 8.05 8.05 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.79 9.79 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32z"/>
-          </svg>
-        </button> */}
-      </div>
+      {/* Left Sidebar - Links (GitHub, LinkedIn, Email, Resume) */}
+      <nav className="left-sidebar" aria-label="Contact and links">
+        <ul className="sidebar-list">
+          <li className="sidebar-item">
+            <a
+              href="https://github.com/armaanamatya"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sidebar-link"
+              title="GitHub"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+          </li>
+          <li className="sidebar-item">
+            <a
+              href="https://www.linkedin.com/in/armaan-amatya/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sidebar-link"
+              title="LinkedIn"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </li>
+          <li className="sidebar-item">
+            <a href="mailto:armaanamatya2014@gmail.com" className="sidebar-link" title="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.855l9.615-7.034h.749c.904 0 1.636.732 1.636 1.636z"/>
+              </svg>
+            </a>
+          </li>
+          <li className="sidebar-item">
+            <button
+              type="button"
+              className="sidebar-link"
+              title="View Resume"
+              onClick={() => setResumeViewerOpen(true)}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
 
       <ScrollWheel />
+      <ResumeViewer isOpen={resumeViewerOpen} onClose={() => setResumeViewerOpen(false)} />
       {/* Bottom Fade Effect */}
       <div className="bottom-fade"></div>
     </div>
