@@ -29,7 +29,7 @@ function App() {
           <h2 className="section-title">About</h2>
           <ul className="about-list">
             <li>
-              Software Engineer with expertise in AI and Full-stack development
+              Senior with a focus for AI research 
             </li>
             <li>
               Doing research in token compression methods for multimodal models
@@ -44,7 +44,7 @@ function App() {
           <h2 className="section-title">What I'm Up To</h2>
           <ul className="up-to-list">
             <li>
-              Building shit for fun
+              Grinding CUDA for my GPU class 
             </li>
             <li>
               Reading AI papers weekly 📄
