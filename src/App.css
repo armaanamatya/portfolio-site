@@ -310,62 +310,64 @@
   }
 }
 
-/* Bottom Toolbar - Ultra-Compact Horizontal Design */
-.bottom-toolbar {
+/* Left Sidebar - Vertical links (GitHub, LinkedIn, Email, Resume) - matches right scroll-wheel style */
+.left-sidebar {
   position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background: rgba(15, 15, 15, 0.95);
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  padding: 6px 16px;
-  backdrop-filter: blur(20px);
-  z-index: 9999;
-  height: 40px;
-  min-width: 220px;
-  transition: transform 0.3s ease;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+  padding: 8px 10px;
 }
 
-.bottom-toolbar:hover {
-  transform: translateX(-50%) scaleX(1.1);
+.sidebar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.toolbar-btn {
+.sidebar-item {
+}
+
+.sidebar-link {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border: none;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.8);
   background: transparent;
-  color: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
+  border: none;
   cursor: pointer;
-  transition: color 0.3s ease;
+  padding: 8px 10px;
+  border-radius: 999px;
+  transition: background 160ms ease, color 160ms ease, opacity 160ms ease, transform 0.25s ease;
   text-decoration: none;
-  font-size: 14px;
+  font-family: inherit;
 }
 
-.toolbar-btn:hover {
-  color: #ffffff;
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  opacity: 1;
+  animation: sidebar-pop-wiggle 0.5s ease-out forwards;
 }
 
-.toolbar-btn svg {
-  width: 20px;
-  height: 20px;
-  transition: color 0.3s ease;
+@keyframes sidebar-pop-wiggle {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.2) rotate(-8deg); }
+  50% { transform: scale(1.2) rotate(8deg); }
+  75% { transform: scale(1.2) rotate(-4deg); }
+  100% { transform: scale(1.2) rotate(0deg); }
 }
 
-/* Toolbar Separator */
-.toolbar-separator {
-  width: 1px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.2);
+.sidebar-link svg {
+  width: 26px;
+  height: 26px;
   flex-shrink: 0;
 }
 
@@ -381,53 +383,9 @@
   z-index: 999;
 }
 
-/* Responsive adjustments for toolbar */
-@media (max-width: 768px) {
-  .bottom-toolbar {
-    bottom: 15px;
-    padding: 5px 14px;
-    gap: 0.4rem;
-    min-width: 200px;
-    height: 36px;
-  }
-  
-  .toolbar-btn {
-    width: 26px;
-    height: 26px;
-    font-size: 13px;
-  }
-  
-  .toolbar-btn svg {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .toolbar-separator {
-    height: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .bottom-toolbar {
-    bottom: 10px;
-    padding: 4px 12px;
-    gap: 0.3rem;
-    min-width: 180px;
-    height: 32px;
-  }
-  
-  .toolbar-btn {
-    width: 24px;
-    height: 24px;
-    font-size: 12px;
-  }
-  
-  .toolbar-btn svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .toolbar-separator {
-    height: 16px;
+/* Responsive: hide left sidebar on smaller screens (matches scroll-wheel breakpoint) */
+@media (max-width: 900px) {
+  .left-sidebar {
+    display: none;
   }
 }
