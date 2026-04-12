@@ -9,6 +9,7 @@ interface ExperienceCardProps {
   description: string[];
   techStack: string[];
   logoUrl?: string;
+  logoText?: string;
   isCurrent?: boolean;
   companyUrl?: string;
 }
@@ -21,6 +22,7 @@ function ExperienceCard({
   description,
   techStack,
   logoUrl,
+  logoText,
   isCurrent,
   companyUrl
 }: ExperienceCardProps) {
@@ -32,6 +34,7 @@ function ExperienceCard({
         <div className="experience-card-left">
           <div className="experience-card-logo">
             {logoUrl && <img src={logoUrl} alt={company} className="experience-logo-img" />}
+            {logoText && !logoUrl && <span className="experience-logo-text">{logoText}</span>}
           </div>
           <div className="experience-card-info">
             <div className="company-header">
