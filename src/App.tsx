@@ -34,9 +34,6 @@ function App() {
             <li>
               Doing research in token compression methods for multimodal models
             </li>
-            <li>
-              Driven by curiosity, problem-solving, and understanding systems from the ground up - always eager to work on ambitious things, so reach out!
-            </li>
           </ul>
         </div>
 
@@ -62,12 +59,26 @@ function App() {
         <div className="experience-section" id="experience">
           <h2 className="section-title">EXPERIENCE</h2>
           <ExperienceCard
-            title="Undergrad Researcher"
+            title="AI Intern"
+            company="Artinafti"
+            location="Houston, TX"
+            period="Jan 2026 - Present"
+            description={[
+              "Engineered multimodal vision–language models for image upscaling, tagging, and generation tasks",
+              "Reduced inference latency by 30% by building scalable APIs with FastAPI, NestJS, Redis, and PostgreSQL"
+            ]}
+            techStack={['FastAPI', 'NestJS', 'Redis', 'PostgreSQL']}
+            logoUrl="/logos/artinafti.jpg"
+            isCurrent={true}
+          />
+
+          <ExperienceCard
+            title="Undergraduate Researcher"
             company="University of Houston"
             location="Houston, TX"
-            period="Jan 2025 - Present"
+            period="Jan 2026 - Present"
             description={[
-              "Working on novel token compression methods for multimodal models"
+              "Developing a novel token compression method for multimodal models"
             ]}
             techStack={[]}
             logoUrl="/uh.jpg"
@@ -75,44 +86,42 @@ function App() {
           />
 
           <ExperienceCard
-            title="Fullstack AI Software Engineer"
-            company="AI Agent Stealth Startup"
-            location="Remote"
-            period="May 2025 - Present"
-            description={[
-              "Owned the end-to-end development of an Agentic Data Analysis platform for Ecommerce Stores, architecting a multi-agent system with Google ADK and LangGraph to automate repetitive data analysis tasks, saving 10+ hours weekly",
-              "Developed a full-stack web app with React 18, TypeScript, and FastAPI, using MongoDB and GCP; deployed via Docker on GCP with 99.9% uptime, handling 1,000+ daily records",
-              "Orchestrated context engineering, reducing hallucinations by 50% and boosting multi-step task completion rates by 30%"
-            ]}
-            techStack={['React', 'TypeScript', 'Python', 'FastAPI', 'LangGraph', 'MongoDB', 'Google Cloud', 'Docker']}
-            logoUrl="/logos/stealth.jpg"
-            isCurrent={true}
-          />
-
-          <ExperienceCard
             title="Machine Learning Research Intern"
             company="Algoverse"
             location="Remote"
-            period="Aug 2025 - Present"
+            period="Aug 2025 - Feb 2026"
             description={[
-              "Researching causal representation learning methods, aimed for submission to ICLR 2025 Workshops",
-              "Prototyped novel attention mechanisms in PyTorch for parameter-efficient fine-tuning on domain-specific datasets, achieving measurable performance gains over baseline LLaMA models",
-              "Designed robust data preprocessing pipelines for multi-modal research datasets (text, protein sequences, vision) and refactored prototype research codebases into modular, reproducible repositories with CI/CD, enabling paper-ready experiments"
+              "Empirically studying agentic misalignment by analyzing how persistent memory and context accumulation induce goal drift, reward misgeneralization, and brittle decision-making in long-horizon LLM agents",
+              "Designed controlled evaluations using simulated agents, ablations over memory and context, and long-horizon task benchmarks to surface and characterize alignment failure modes"
             ]}
-            techStack={['Python', 'PyTorch', 'LLaMA', 'CI/CD']}
+            techStack={['Python', 'PyTorch', 'LLMs']}
             logoUrl="/logos/algoverse.jpg"
-            isCurrent={true}
             companyUrl="https://algoverseairesearch.org"
           />
 
           <ExperienceCard
-            title="Software Engineering Lead"
+            title="Fullstack AI Software Engineer"
+            company="Stealth AI Startup"
+            location="Houston, TX"
+            period="May 2025 - Jan 2026"
+            description={[
+              "Saved 10+ hours per week for Amazon stores by designing and deploying an Agentic data analysis system that autonomously decomposes and executes multi-step analytical tasks",
+              "Maintained 99.9% uptime while processing 1,000+ daily records by building and operating a production full-stack system on GCP",
+              "Reduced model hallucinations by 50% and improved multi-step task success by 30% through principled context engineering and structured agent orchestration"
+            ]}
+            techStack={['React', 'TypeScript', 'Python', 'FastAPI', 'GCP', 'Docker']}
+            logoUrl="/logos/stealth.jpg"
+          />
+
+          <ExperienceCard
+            title="Software Engineer"
             company="MyMCAT.ai"
             location="Houston, TX"
             period="Aug 2024 - Apr 2025"
             description={[
-              "Collaborated with a team to build an AI-driven MCAT prep platform serving 1,000+ students, gamifying learning through AI personalization",
-              "Developed an intelligent tutoring system with NextJS, TypeScript, and Supabase"
+              "Built and scaled an AI-driven MCAT preparation platform through personalized learning, supporting 1,000+ students and $20K MRR",
+              "Improved student outcomes through adaptive tutoring, increasing scores by 20%",
+              "Contributed to product growth leading to a $6K acquisition"
             ]}
             techStack={['Next.js', 'TypeScript', 'Supabase', 'AI']}
             logoUrl="/logos/mymcat.jpg"
@@ -125,10 +134,10 @@ function App() {
             location="New York, NY"
             period="May 2024 - Aug 2024"
             description={[
-              "Built a Python NLP pipeline with scikit-learn, spaCy, and NLTK, productionized with Flask to analyze 1200+ software engineering requirements, saving the company $2000 annually by decreasing project lead times",
-              "Engineered BERT-based dependency extraction for requirement lists, improving project planning efficiency by 37%"
+              "Fine-tuned a FaceNet-based face recognition model on a proprietary company dataset, achieving 98% precision for real-world attendance tracking under varied lighting and pose conditions",
+              "Built a production-grade REST API using Python, FastAPI, PostgreSQL, and Docker; implemented async server-side processing and batch inference to support concurrent requests from a mobile attendance application"
             ]}
-            techStack={['Python', 'scikit-learn', 'spaCy', 'NLTK', 'Flask', 'BERT']}
+            techStack={['Python', 'FastAPI', 'PostgreSQL', 'Docker', 'FaceNet']}
             logoUrl="/logos/fuse.jpg"
             companyUrl="https://fusemachines.com"
           />
@@ -139,10 +148,9 @@ function App() {
             location="Remote"
             period="May 2023 - Aug 2023"
             description={[
-              "Optimized REST APIs in Java Spring Boot for an investment platform, reducing latency by 50% through query optimization and caching",
-              "Implemented a secure, stateless authentication system in Spring Boot with Spring Security and JWT, integrated with Supabase, and validated using Postman"
+              "Improved investment platform performance by optimizing Java Spring Boot backend APIs through query optimization, caching, and secure stateless authentication, achieving a 50% reduction in API latency"
             ]}
-            techStack={['Java', 'Spring Boot', 'Spring Security', 'JWT', 'Supabase', 'Postman']}
+            techStack={['Java', 'Spring Boot', 'Spring Security', 'JWT']}
             logoUrl="/logos/f1soft.jpg"
             companyUrl="https://f1soft.com"
           />
