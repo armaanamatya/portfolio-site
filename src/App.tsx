@@ -68,7 +68,7 @@ function App() {
               "Reduced inference latency by 30% by building scalable APIs with FastAPI, NestJS, Redis, and PostgreSQL"
             ]}
             techStack={['FastAPI', 'NestJS', 'Redis', 'PostgreSQL']}
-            logoUrl="/logos/artinafti.jpg"
+            logoText="artinafti"
             isCurrent={true}
           />
 

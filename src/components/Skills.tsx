@@ -14,37 +14,22 @@ function Skills() {
       title: "Languages",
       skills: [
         { name: "Python", icon: "python" },
-        { name: "C", icon: "c" },
         { name: "C++", icon: "cpp" },
-        { name: "Java", icon: "java" },
-        { name: "JavaScript", icon: "js" },
-        { name: "TypeScript", icon: "ts" },
-        { name: "SQL", icon: "mysql" }
+        { name: "TypeScript", icon: "ts" }
       ]
     },
     {
       title: "Frontend",
       skills: [
-        { name: "HTML", icon: "html" },
-        { name: "CSS", icon: "css" },
-        { name: "Sass", icon: "sass" },
-        { name: "Tailwind", icon: "tailwind" },
-        { name: "Bootstrap", icon: "bootstrap" },
         { name: "React", icon: "react" },
-        { name: "Angular", icon: "angular" },
-        { name: "jQuery", icon: "jquery" },
-        { name: "Next.js", icon: "nextjs" },
-        { name: "Vite", icon: "vite" },
-        { name: "Material UI", icon: "materialui" }
+        { name: "Next.js", icon: "nextjs" }
       ]
     },
     {
       title: "Backend",
       skills: [
         { name: "Node.js", icon: "nodejs" },
-        { name: "Express", icon: "express" },
         { name: "NestJS", icon: "nestjs" },
-        { name: "Spring", icon: "spring" },
         { name: "FastAPI", icon: "fastapi" },
         { name: "Flask", icon: "flask" },
         { name: "Django", icon: "django" }
@@ -60,44 +45,30 @@ function Skills() {
     {
       title: "Databases",
       skills: [
-        { name: "PostgreSQL", icon: "postgres" },
         { name: "MongoDB", icon: "mongodb" },
-        { name: "Supabase", icon: "supabase" },
-        { name: "Redis", icon: "redis" },
-        { name: "Prisma", icon: "prisma" }
+        { name: "PostgreSQL", icon: "postgres" },
+        { name: "Redis", icon: "redis" }
       ]
     },
     {
       title: "DevOps",
       skills: [
         { name: "Docker", icon: "docker" },
-        { name: "Kubernetes", icon: "kubernetes" },
-        { name: "Linux", icon: "linux" },
-        { name: "Cloudflare", icon: "cloudflare" },
-        { name: "Postman", icon: "postman" },
-        { name: "Git", icon: "git" },
-        { name: "GitHub Actions", icon: "githubactions" }
+        { name: "Kubernetes", icon: "kubernetes" }
       ]
     },
     {
       title: "Cloud",
       skills: [
-        { name: "Google Cloud", icon: "gcp" },
-        { name: "AWS", icon: "aws" }
-      ]
-    },
-    {
-      title: "Others",
-      skills: [
-        { name: "Photoshop", icon: "ps" },
-        { name: "Figma", icon: "figma" }
+        { name: "AWS", icon: "aws" },
+        { name: "Google Cloud", icon: "gcp" }
       ]
     }
   ];
 
   return (
     <div className="skills-section">
-      <h2 className="section-title">SKILLS</h2>      
+      <h2 className="section-title">WHAT I USE MOSTLY</h2>      
       <div className="skills-flow">
         {skillCategories.map((category, categoryIndex) => (
           <div key={categoryIndex} className="skill-category-flow">
