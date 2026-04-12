@@ -99,7 +99,7 @@ function App() {
             companyUrl="https://algoverseairesearch.org"
           />
 
-          <ExperienceCard
+          {/* <ExperienceCard
             title="Fullstack AI Software Engineer"
             company="Stealth AI Startup"
             location="Houston, TX"
@@ -111,7 +111,7 @@ function App() {
             ]}
             techStack={['React', 'TypeScript', 'Python', 'FastAPI', 'GCP', 'Docker']}
             logoUrl="/logos/stealth.jpg"
-          />
+          /> */}
 
           <ExperienceCard
             title="Software Engineer"
