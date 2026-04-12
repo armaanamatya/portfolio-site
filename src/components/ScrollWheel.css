@@ -4,9 +4,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px);
-  border-radius: 999px;
+  background: transparent;
   padding: 8px 10px;
 }
 
