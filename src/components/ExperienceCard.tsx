@@ -17,7 +17,6 @@ interface ExperienceCardProps {
 function ExperienceCard({ 
   title, 
   company, 
-  // location, 
   period, 
   description,
   techStack,
@@ -29,8 +28,8 @@ function ExperienceCard({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="experience-card">
-      <div className="experience-card-header" onClick={() => setIsExpanded(!isExpanded)}>
+    <div className="experience-card-wrapper">
+      <div className="experience-card" onClick={() => setIsExpanded(!isExpanded)}>
         <div className="experience-card-left">
           <div className="experience-card-logo">
             {logoUrl && <img src={logoUrl} alt={company} className="experience-logo-img" />}
@@ -54,7 +53,7 @@ function ExperienceCard({
           </div>
         </div>
       </div>
-      
+
       {isExpanded && (
         <div className="experience-details">
           <div className="experience-description">
@@ -64,10 +63,9 @@ function ExperienceCard({
               ))}
             </ul>
           </div>
-          
+
           <div className="tech-stack">
             {techStack.map((tech, index) => {
-              // Filter out generic terms and map to skillicon names
               const skillIconMap: { [key: string]: string } = {
                 'React': 'react',
                 'TypeScript': 'ts',
@@ -82,19 +80,17 @@ function ExperienceCard({
                 'MySQL': 'mysql',
                 'Redis': 'redis',
                 'PyTorch': 'pytorch',
-                'scikit-learn': 'scikitlearn'
+                'scikit-learn': 'scikitlearn',
+                'Docker': 'docker',
+                'PostgreSQL': 'postgres',
+                'NestJS': 'nestjs',
               };
 
               const iconName = skillIconMap[tech];
-              
-              // Skip generic terms
-              const genericTerms = ['AI', 'ML', 'NLP', 'BERT', 'LLM', 'Research', 'WebSocket', 'LangGraph', 'REST API'];
-              if (genericTerms.includes(tech) || !iconName) {
-                return null;
-              }
+              const genericTerms = ['AI', 'ML', 'NLP', 'BERT', 'LLM', 'LLMs', 'Research', 'WebSocket', 'LangGraph', 'REST API', 'FaceNet', 'Spring Security', 'JWT'];
+              if (genericTerms.includes(tech) || !iconName) return null;
 
               const iconUrl = `https://skillicons.dev/icons?i=${iconName}&theme=dark`;
-              
               return (
                 <div key={index} className="tech-icon" title={tech}>
                   <img src={iconUrl} alt={tech} />
@@ -102,7 +98,7 @@ function ExperienceCard({
               );
             })}
           </div>
-          
+
           {companyUrl && (
             <a href={companyUrl} target="_blank" rel="noopener noreferrer" className="visit-company-btn">
               <svg className="external-icon" viewBox="0 0 16 16" fill="currentColor">

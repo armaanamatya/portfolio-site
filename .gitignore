@@ -26,3 +26,6 @@ dist-ssr
 # Personal files
 misc/
 thots.txt
+
+# Next.js build output
+.next/

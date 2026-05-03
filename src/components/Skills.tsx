@@ -14,52 +14,23 @@ function Skills() {
       title: "Languages",
       skills: [
         { name: "Python", icon: "python" },
-        { name: "C++", icon: "cpp" },
-        { name: "TypeScript", icon: "ts" }
+        { name: "TypeScript", icon: "ts" },
+        { name: "C++", icon: "cpp" }
       ]
     },
     {
-      title: "Frontend",
+      title: "Frameworks & Libraries",
       skills: [
-        { name: "React", icon: "react" },
-        { name: "Next.js", icon: "nextjs" }
-      ]
-    },
-    {
-      title: "Backend",
-      skills: [
-        { name: "Node.js", icon: "nodejs" },
-        { name: "NestJS", icon: "nestjs" },
+        { name: "Next.js", icon: "nextjs" },
         { name: "FastAPI", icon: "fastapi" },
-        { name: "Flask", icon: "flask" },
-        { name: "Django", icon: "django" }
+        { name: "PyTorch", icon: "pytorch" }
       ]
     },
     {
-      title: "AI/ML",
+      title: "Infrastructure & DBs",
       skills: [
-        { name: "PyTorch", icon: "pytorch" },
-        { name: "TensorFlow", icon: "tensorflow" }
-      ]
-    },
-    {
-      title: "Databases",
-      skills: [
-        { name: "MongoDB", icon: "mongodb" },
         { name: "PostgreSQL", icon: "postgres" },
-        { name: "Redis", icon: "redis" }
-      ]
-    },
-    {
-      title: "DevOps",
-      skills: [
         { name: "Docker", icon: "docker" },
-        { name: "Kubernetes", icon: "kubernetes" }
-      ]
-    },
-    {
-      title: "Cloud",
-      skills: [
         { name: "AWS", icon: "aws" },
         { name: "Google Cloud", icon: "gcp" }
       ]
@@ -68,7 +39,7 @@ function Skills() {
 
   return (
     <div className="skills-section">
-      <h2 className="section-title">WHAT I USE MOSTLY</h2>      
+      <h2 className="section-title">What I Use Mostly</h2>      
       <div className="skills-flow">
         {skillCategories.map((category, categoryIndex) => (
           <div key={categoryIndex} className="skill-category-flow">

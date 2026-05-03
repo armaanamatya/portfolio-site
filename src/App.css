@@ -1,100 +1,87 @@
+/* ===================== Global ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #e8e8e8;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 .portfolio {
   background: #0a0a0a;
-  color: #ffffff;
+  color: #e8e8e8;
   min-height: 100vh;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
-
-.points-section {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 4rem;
-  max-width: 900px;
+/* ===================== Main Content ===================== */
+.main-content {
+  max-width: 720px;
   margin: 0 auto;
+  padding: 3.5rem 2rem 6rem;
 }
 
-.points {
-  font-size: 0.875rem;
-  color: #ffffff;
-}
-
-.refresh-btn {
-  background: none;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-/* Hero Section */
+/* ===================== Hero ===================== */
 .hero-section {
-  padding: 2rem 4rem 1rem;
-  max-width: 900px;
-  margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
 .hero-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2rem 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.hero-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.profile-image {
-  margin-bottom: 1.5rem;
-}
-
-.profile-image img {
-  width: 200px;
-  height: auto;
-  border-radius: 2px;
-  object-fit: contain;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6), 0 0 16px rgba(0, 0, 0, 0.3);
-}
-
-.hero-intro {
+.hero-text {
   flex: 1;
 }
 
 .hero-name {
-  font-size: 2rem;
-  font-weight: 400;
-  margin: 0 0 1rem 0;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem 0;
   color: #ffffff;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
 .hero-subtitle {
   font-size: 1rem;
   font-weight: 400;
-  color: #ffffff;
-  margin: 0 0 0.25rem 0;
-  line-height: 1.4;
+  color: #888;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.profile-image {
+  flex-shrink: 0;
+}
+
+.profile-image img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.12);
 }
 
 .uh-logo {
-  height: 1.5em;
+  height: 1.3em;
   width: auto;
   vertical-align: middle;
   margin-left: 0.25rem;
-  border-radius: 0.25rem;
+  border-radius: 0.2rem;
 }
 
+/* wave emoji */
 .wave-emoji {
   display: inline-block;
-  transition: transform 0.3s ease;
   transform-origin: 70% 70%;
   animation: autoWave 6s ease-in-out infinite;
   cursor: pointer;
@@ -123,205 +110,50 @@
   98% { transform: rotate(10deg); }
 }
 
-.widgets-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .widgets-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
-.about-section {
-  margin: 0 0 3rem 0;
-}
-
-.about-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #cccccc;
-  margin: 1rem 0 0 0;
-  max-width: none;
-}
-
-.about-list {
-  margin: 1rem 0 0 0;
-  padding-left: 1.5rem;
-  list-style-type: disc;
-}
-
-.about-list li {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #cccccc;
-  margin-bottom: 1rem;
-}
-
-.about-list li:last-child {
-  margin-bottom: 0;
-}
-
-.about-list strong {
-  color: #ffffff;
-  font-weight: 600;
-}
-
-/* What I'm Up To Section */
-.what-im-up-to-section {
-  margin: 0 0 3rem 0;
-}
-
-.up-to-list {
-  margin: 1rem 0 0 0;
-  padding-left: 1.5rem;
-  list-style-type: disc;
-}
-
-.up-to-list li {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #cccccc;
-  margin-bottom: 1rem;
-}
-
-.up-to-list li:last-child {
-  margin-bottom: 0;
-}
-
-.big-red-f {
-  display: inline-block;
-  color: #e53935;
-  font-size: 1.8em;
-  font-weight: 800;
-  line-height: 0.9;
-  text-shadow: 0 0 12px rgba(229, 57, 53, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5);
-  transform: translateY(0.1em);
-  margin-right: -0.15em;
-}
-
-.course-link {
-  color: #3b82f6;
-  text-decoration: none;
-  margin: 0 0.25rem;
-  transition: color 0.3s ease;
-}
-
-.course-link:hover {
-  color: #60a5fa;
-  text-decoration: underline;
-}
-
-.main-content {
-  padding: 0 4rem 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.experience-section {
-  margin-top: 1.5rem;
+/* ===================== Sections ===================== */
+.page-section {
+  margin-bottom: 2.75rem;
 }
 
 .section-title {
-  font-size: 1.4rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: #ffffff;
-  margin: 0 0 2rem 0;
-  position: relative;
-  padding-bottom: 0.75rem;
+  margin: 0 0 1.1rem 0;
+  letter-spacing: 0;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.3));
-  border-radius: 1px;
+/* About (merged) paragraph */
+.about-para {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #aaa;
+  margin: 0;
 }
 
-
-.section-divider {
-  margin: 2rem 0;
-  padding: 1rem 0;
-  border-top: 1px solid #1a1a1a;
+.about-para .highlight {
+  color: #e8e8e8;
+  font-weight: 500;
 }
 
-.section-divider span {
-  font-size: 0.875rem;
-  color: #888888;
+/* big red F easter egg */
+.big-red-f {
+  display: inline-block;
+  color: #e53935;
+  font-size: 1.4em;
+  font-weight: 800;
+  line-height: 0.9;
+  text-shadow: 0 0 10px rgba(229, 57, 53, 0.7);
+  transform: translateY(0.1em);
+  margin-right: -0.1em;
 }
 
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 1.5rem 2rem 1rem;
-  }
-  
-  .hero-header {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 1rem;
-  }
-  
-  .hero-name {
-    font-size: 1.75rem;
-  }
-  
-  .about-section {
-    padding: 0 2rem;
-  }
-
-  .what-im-up-to-section {
-    padding: 0 2rem;
-  }
-  
-  .main-content {
-    padding: 0 2rem 1.5rem;
-  }
+/* ===================== Experience Section ===================== */
+.experience-section {
+  margin-bottom: 2.75rem;
 }
 
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 1rem 1.5rem;
-  }
-  
-  .hero-name {
-    font-size: 1.5rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 0.9rem;
-  }
-  
-  .uh-logo {
-    height: 1.3em;
-  }
-  
-  .about-section {
-    padding: 0 1.5rem;
-  }
-
-  .what-im-up-to-section {
-    padding: 0 1.5rem;
-  }
-  
-  .main-content {
-    padding: 0 1.5rem;
-  }
-}
-
-/* Left Sidebar - Vertical links (GitHub, LinkedIn, Email, Resume) - matches right scroll-wheel style */
+/* ===================== Left Sidebar ===================== */
 .left-sidebar {
   position: fixed;
   left: 20px;
@@ -341,8 +173,7 @@
   gap: 6px;
 }
 
-.sidebar-item {
-}
+.sidebar-item {}
 
 .sidebar-link {
   display: flex;
@@ -367,34 +198,38 @@
 }
 
 @keyframes sidebar-pop-wiggle {
-  0% { transform: scale(1) rotate(0deg); }
-  25% { transform: scale(1.2) rotate(-8deg); }
-  50% { transform: scale(1.2) rotate(8deg); }
-  75% { transform: scale(1.2) rotate(-4deg); }
+  0%   { transform: scale(1) rotate(0deg); }
+  25%  { transform: scale(1.2) rotate(-8deg); }
+  50%  { transform: scale(1.2) rotate(8deg); }
+  75%  { transform: scale(1.2) rotate(-4deg); }
   100% { transform: scale(1.2) rotate(0deg); }
 }
 
 .sidebar-link svg {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
 }
 
-/* Bottom Fade Effect */
+/* ===================== Bottom Fade ===================== */
 .bottom-fade {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px;
-  background: linear-gradient(to top, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.5) 50%, transparent 100%);
+  height: 80px;
+  background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, transparent 100%);
   pointer-events: none;
   z-index: 999;
 }
 
-/* Responsive: hide left sidebar on smaller screens (matches scroll-wheel breakpoint) */
+/* ===================== Responsive ===================== */
 @media (max-width: 900px) {
-  .left-sidebar {
-    display: none;
-  }
+  .left-sidebar { display: none; }
+}
+
+@media (max-width: 640px) {
+  .main-content { padding: 2rem 1.25rem 5rem; }
+  .hero-name { font-size: 1.9rem; }
+  .profile-image img { width: 70px; height: 70px; }
 }

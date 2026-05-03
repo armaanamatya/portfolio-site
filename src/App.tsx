@@ -1,13 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-// Updated for root directory deployment
 import ExperienceCard from './components/ExperienceCard'
-// import Certificates from './components/Certificates'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import ProjectSlider from './components/ProjectSlider'
-// import HackathonSlider from './components/HackathonSlider'
-import ScrollWheel from './components/ScrollWheel'
 import ResumeViewer from './components/ResumeViewer'
 
 function App() {
@@ -15,49 +11,37 @@ function App() {
   return (
     <div className="portfolio">
       <main className="main-content">
+
+        {/* Hero */}
         <div className="hero-section" id="hero">
           <div className="hero-content">
+            <div className="hero-text">
+              <h1 className="hero-name">Hi, I'm Armaan <span className="wave-emoji">👋</span></h1>
+              <p className="hero-subtitle">
+                Senior majoring in CS + Math @{' '}
+                <img src="/uh.jpg" alt="University of Houston" className="uh-logo" title="University of Houston" />
+              </p>
+            </div>
             <div className="profile-image">
               <img src="/IMG_1854.jpg" alt="Armaan Amatya" />
             </div>
-            <h1 className="hero-name">Hi, I'm Armaan <span className="wave-emoji">👋</span></h1>
-            <p className="hero-subtitle">Senior majoring in CS + Math @ <img src="/uh.jpg" alt="University of Houston" className="uh-logo" title="University of Houston" /></p>
           </div>
         </div>
 
-        <div className="about-section" id="about">
+        {/* About (merged with What I'm Up To) */}
+        <div className="page-section" id="about">
           <h2 className="section-title">About</h2>
-          <ul className="about-list">
-            <li>
-              Senior with a focus for AI research 
-            </li>
-            <li>
-              Doing research in token compression methods for multimodal models
-            </li>
-          </ul>
+          <p className="about-para">
+            I'm a <span className="highlight">CS + Math senior</span> at the University of Houston with a focus on AI research — currently working on token compression methods for multimodal models and engineering scalable vision–language APIs at{' '}
+            <span className="highlight">Artinafti</span>. I've interned across ML research (Algoverse, FuseMachines) and product engineering (MyMCAT.ai, F1Soft), and I care a lot about building things that actually ship.
+            When I'm not in the lab, I'm grinding CUDA for my GPU class, reading AI papers weekly 📄, and{' '}
+            <span className="big-red-f">F</span>ailing exams and locking in.
+          </p>
         </div>
 
-        <div className="what-im-up-to-section" id="what-im-up-to">
-          <h2 className="section-title">What I'm Up To</h2>
-          <ul className="up-to-list">
-            <li>
-              Grinding CUDA for my GPU class 
-            </li>
-            <li>
-              Reading AI papers weekly 📄
-            </li>
-            <li>
-              <span className="big-red-f">F</span>ailing exams and locking in
-            </li>
-          </ul>
-        </div>
-
-        <div id="education">
-          <Education />
-        </div>
-
+        {/* Work Experience */}
         <div className="experience-section" id="experience">
-          <h2 className="section-title">EXPERIENCE</h2>
+          <h2 className="section-title">Work Experience</h2>
           <ExperienceCard
             title="AI Intern"
             company="Artinafti"
@@ -98,20 +82,6 @@ function App() {
             logoUrl="/logos/algoverse.jpg"
             companyUrl="https://algoverseairesearch.org"
           />
-
-          {/* <ExperienceCard
-            title="Fullstack AI Software Engineer"
-            company="Stealth AI Startup"
-            location="Houston, TX"
-            period="May 2025 - Jan 2026"
-            description={[
-              "Saved 10+ hours per week for Amazon stores by designing and deploying an Agentic data analysis system that autonomously decomposes and executes multi-step analytical tasks",
-              "Maintained 99.9% uptime while processing 1,000+ daily records by building and operating a production full-stack system on GCP",
-              "Reduced model hallucinations by 50% and improved multi-step task success by 30% through principled context engineering and structured agent orchestration"
-            ]}
-            techStack={['React', 'TypeScript', 'Python', 'FastAPI', 'GCP', 'Docker']}
-            logoUrl="/logos/stealth.jpg"
-          /> */}
 
           <ExperienceCard
             title="Software Engineer"
@@ -156,23 +126,24 @@ function App() {
           />
         </div>
 
-        {/* <div id="certificates">
-          <Certificates />
-        </div> */}
-        
-        <div id="skills">
+        {/* Education */}
+        <div className="page-section" id="education">
+          <Education />
+        </div>
+
+        {/* Skills */}
+        <div className="page-section" id="skills">
           <Skills />
         </div>
-        
-        <div id="projects">
+
+        {/* Projects */}
+        <div className="page-section" id="projects">
           <ProjectSlider />
         </div>
-        {/* <div id="hackathons">
-          <HackathonSlider />
-        </div> */}
+
       </main>
 
-      {/* Left Sidebar - Links (GitHub, LinkedIn, Email, Resume) */}
+      {/* Left Sidebar */}
       <nav className="left-sidebar" aria-label="Contact and links">
         <ul className="sidebar-list">
           <li className="sidebar-item">
@@ -223,9 +194,7 @@ function App() {
         </ul>
       </nav>
 
-      <ScrollWheel />
       <ResumeViewer isOpen={resumeViewerOpen} onClose={() => setResumeViewerOpen(false)} />
-      {/* Bottom Fade Effect */}
       <div className="bottom-fade"></div>
     </div>
   )

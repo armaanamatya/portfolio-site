@@ -1,6 +1,6 @@
 /* Skills Component Styles */
 .skills-section {
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
 .skills-subtitle {
@@ -11,7 +11,7 @@
 }
 
 .skills-flow {
-  margin-top: 2rem;
+  margin-top: 0.75rem;
 }
 
 .skill-category-flow {
@@ -23,11 +23,12 @@
 }
 
 .category-title-flow {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #ffffff;
-  margin: 0 0 0.5rem 0;
-  letter-spacing: 0.02em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #666;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .skills-icons-flow {
