@@ -2,45 +2,34 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Structure
-
-This is a React + TypeScript + Vite portfolio website located in the `v0/` directory. The main application code is in `v0/src/` with the following key files:
-- `App.tsx` - Main application component containing the portfolio layout
-- `components/ExperienceCard.tsx` - Reusable component for displaying work experience
-- `App.css` and `index.css` - Styling files
-
 ## Development Commands
 
-Run these commands from the `v0/` directory:
+Run from the repo root (the app lives at the root, not in a subdirectory):
 
-- **Development server**: `npm run dev` (starts Vite dev server with HMR)
-- **Build**: `npm run build` (TypeScript compilation + Vite build)
-- **Lint**: `npm run lint` (ESLint with React and TypeScript rules)
-- **Preview**: `npm run preview` (preview production build locally)
+- `npm run dev` — Vite dev server with HMR
+- `npm run build` — `tsc -b && vite build` (TypeScript project-references build, then Vite bundle)
+- `npm run lint` — ESLint over the repo
+- `npm run preview` — preview the production build locally
 
-## Tech Stack
+There is no test runner configured.
 
-- **Frontend**: React 19.1.1 with TypeScript
-- **Build Tool**: Vite 7.1.7
-- **Linting**: ESLint 9.36.0 with TypeScript ESLint, React Hooks, and React Refresh plugins
-- **Styling**: CSS files (no CSS framework currently used)
+## Architecture
 
-## Code Architecture
+Single-page React 19 + TypeScript portfolio bundled by Vite 7. Deployed to Vercel (`vercel.json`).
 
-The portfolio is a single-page application with:
-- Main `App` component that renders header, profile section, and experience cards
-- `ExperienceCard` component that accepts props for job details and tech stack
-- CSS classes following a component-based naming convention (e.g., `.portfolio`, `.header`, `.role`)
+`src/App.tsx` is the single page. It composes section blocks (`#hero`, `#about`, `#experience`, `#education`, `#skills`, `#projects`) inside `<main className="main-content">`, with a fixed `left-sidebar` for social/contact links and a `ResumeViewer` modal toggled from the sidebar. Section content lives in `src/components/`:
 
-## TypeScript Configuration
+- `ExperienceCard` — work experience rows; `App.tsx` instantiates one per role with hardcoded props (title, company, period, description bullets, techStack, logoUrl/logoText, isCurrent, companyUrl). All resume content is authored inline in `App.tsx` rather than loaded from data files.
+- `Education`, `Skills`, `ProjectSlider`, `ResumeViewer` — self-contained section components rendered directly by `App.tsx`.
+- Other components (`Certificates`, `HackathonSlider`, `HighlightWidget`, `InfoCard`, `ProjectModal`, `ScrollWheel`, `SectionTags`) exist in `src/components/` but are not all wired into the current `App.tsx` — check imports before assuming a component is live.
 
-Uses a composite TypeScript setup:
-- `tsconfig.json` - Main config referencing app and node configs
-- `tsconfig.app.json` - App-specific TypeScript settings
-- `tsconfig.node.json` - Node/build tool TypeScript settings
+Styling is plain CSS (`src/App.css`, `src/index.css`) — no Tailwind / CSS-in-JS. Class names follow component-scoped BEM-ish conventions (`.portfolio`, `.hero-section`, `.experience-section`, `.section-title`, `.highlight`). Static assets (logos, profile image, resume) are served from `public/` and referenced by absolute paths like `/uh.jpg`, `/logos/algoverse.jpg`.
 
-## Notes
+## TypeScript
 
-- The project is set up as a standard Vite + React + TypeScript template
-- ESLint is configured but no test runner is currently set up
-- The application displays personal portfolio information with work experience cards
+Composite setup: `tsconfig.json` references `tsconfig.app.json` (app sources) and `tsconfig.node.json` (Vite/build tooling). The build script runs `tsc -b` first, so type errors in either project will fail `npm run build`.
+
+## Conventions
+
+- When adding a new experience or section item, edit `App.tsx` directly — there is no CMS or data layer.
+- New static assets go in `public/` and are referenced with a leading slash.

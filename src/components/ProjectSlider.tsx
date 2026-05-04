@@ -94,6 +94,19 @@ function ProjectSlider() {
             </div>
           </div>
         ))}
+        
+        <div className="project-card updating-soon-card">
+          <div className="updating-content">
+            <div className="updating-icon">✨</div>
+            <h3>Updating Soon!</h3>
+            <p>I have about 3 more projects I'll be adding here very soon (mostly in a day or so). Stay tuned!</p>
+            <div className="updating-loader">
+              <span className="dot"></span>
+              <span className="dot"></span>
+              <span className="dot"></span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
