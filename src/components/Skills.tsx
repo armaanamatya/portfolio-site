@@ -1,4 +1,5 @@
 import './Skills.css';
+import { revealDelayStyle } from '../utils/reveal';
 
 interface SkillCategory {
   title: string;
@@ -39,16 +40,27 @@ function Skills() {
 
   return (
     <div className="skills-section">
-      <h2 className="section-title">What I Use Mostly</h2>      
+      <h2 className="section-title" data-reveal="inline">What I Use Mostly</h2>      
       <div className="skills-flow">
         {skillCategories.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="skill-category-flow">
+          <div
+            key={categoryIndex}
+            className="skill-category-flow"
+            data-reveal="card"
+            style={revealDelayStyle(50 + categoryIndex * 80)}
+          >
             <h3 className="category-title-flow">{category.title}</h3>
             <div className="skills-icons-flow">
               {category.skills.map((skill, skillIndex) => {
                 const iconUrl = `https://skillicons.dev/icons?i=${skill.icon}&theme=dark`;
                 return (
-                  <div key={skillIndex} className="skill-icon-flow" title={skill.name}>
+                  <div
+                    key={skillIndex}
+                    className="skill-icon-flow"
+                    title={skill.name}
+                    data-reveal="micro"
+                    style={revealDelayStyle(110 + categoryIndex * 80 + skillIndex * 45)}
+                  >
                     <img src={iconUrl} alt={skill.name} />
                   </div>
                 );

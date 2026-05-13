@@ -29,3 +29,6 @@ thots.txt
 
 # Next.js build output
 .next/
+artifacts/playwright/
+.tmp-playwright-check.png
+scripts/

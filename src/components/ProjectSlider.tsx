@@ -1,9 +1,9 @@
 import './ProjectSlider.css';
+import { revealDelayStyle } from '../utils/reveal';
 
 interface Project {
   id: number;
   title: string;
-  year: string;
   description: string;
   image: string;
   techStack: string[];
@@ -11,11 +11,12 @@ interface Project {
   githubUrl?: string;
 }
 
+const PLACEHOLDER_IMAGE = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSIjMDAwMDAwIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTI1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5JbWFnZSBjb21pbmcgc29vbjwvdGV4dD4KPC9zdmc+";
+
 const projects: Project[] = [
   {
     id: 1,
     title: "Qie",
-    year: "2024",
     description: "An alternative to FL Studio. A full-fledged music production software designed for modern creators.",
     image: "/qieimg.png",
     techStack: ['Python', 'PyQT', 'Demucs'],
@@ -23,21 +24,47 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "MyMCAT.ai Platform",
-    year: "2024 - 2025",
-    description: "AI-based education platform serving 1,000+ students with personalized MCAT preparation and analytics.",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=250&fit=crop",
-    techStack: ['Next.js', 'TypeScript', 'Prisma', 'Supabase'],
-    liveUrl: "https://mymcat.ai",
+    title: "JobTool",
+    description: "A personal tool for job application automation and tracking (Working on chrome extension)",
+    image: PLACEHOLDER_IMAGE,
+    techStack: ['React', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB'],
+    githubUrl: "https://github.com/armaanamatya/jobtool"
   },
   {
     id: 3,
-    title: "JobTool",
-    year: "2024",
-    description: "A personal tool for job application automation and tracking (Working on chrome extension)",
-    image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSIjMDAwMDAwIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTI1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Xb3JrSW5Qcm9nPC90ZXh0Pgo8L3N2Zz4K",
-    techStack: ['React', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB'],
-    githubUrl: "https://github.com/armaanamatya/jobtool"
+    title: "AImsg",
+    description: "Placeholder description — short blurb about what AImsg does, who it's for, and the main result. Replace later.",
+    image: PLACEHOLDER_IMAGE,
+    techStack: ['TypeScript', 'React', 'Node.js'],
+    liveUrl: "https://example.com/aimsg",
+    githubUrl: "https://github.com/armaanamatya/aimsg"
+  },
+  {
+    id: 4,
+    title: "OpenApplier",
+    description: "Placeholder description — short blurb about OpenApplier, the problem it solves, and key tech. Replace later.",
+    image: PLACEHOLDER_IMAGE,
+    techStack: ['TypeScript', 'Next.js', 'Python'],
+    liveUrl: "https://example.com/openapplier",
+    githubUrl: "https://github.com/armaanamatya/openapplier"
+  },
+  {
+    id: 5,
+    title: "Mixed-Precision GEMM in Triton",
+    description: "Placeholder description — tiled FP16 GEMM kernel in OpenAI Triton, autotuned and benchmarked across RTX 3080, RTX 5060 Ti, and AMD RX 7900. Replace later.",
+    image: PLACEHOLDER_IMAGE,
+    techStack: ['OpenAI Triton', 'CUDA', 'Python', 'PyTorch', 'Nsight Compute'],
+    liveUrl: "https://example.com/triton-gemm",
+    githubUrl: "https://github.com/armaanamatya/triton-gemm"
+  },
+  {
+    id: 6,
+    title: "Real-Time Distributed Keyword Spotting",
+    description: "Placeholder description — three-node distributed inference pipeline detecting spoken emergency commands within a 150 ms hard end-to-end deadline. Replace later.",
+    image: PLACEHOLDER_IMAGE,
+    techStack: ['Python', 'PyTorch', 'Wav2Vec2', 'CUDA', 'VxWorks', 'UDP'],
+    liveUrl: "https://example.com/kws-pipeline",
+    githubUrl: "https://github.com/armaanamatya/kws-pipeline"
   }
 ];
 
@@ -45,23 +72,27 @@ function ProjectSlider() {
   return (
     <section className="new-projects-section">
       <div className="projects-header-container">
-        <div className="projects-pill">My Projects</div>
-        <h2 className="projects-main-title">Check out my latest work</h2>
-        <p className="projects-subtitle">
+        <div className="projects-pill" data-reveal="inline">My Projects</div>
+        <h2 className="projects-main-title" data-reveal="section" style={revealDelayStyle(70)}>Check out my latest work</h2>
+        <p className="projects-subtitle" data-reveal="text" style={revealDelayStyle(130)}>
           I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
         </p>
       </div>
 
       <div className="projects-grid">
-        {projects.map((project) => (
-          <div key={project.id} className="project-card">
+        {projects.map((project, index) => (
+          <div
+            key={project.id}
+            className="project-card"
+            data-reveal="card"
+            style={revealDelayStyle(40 + index * 70)}
+          >
             <div className="project-image-wrapper">
               <img src={project.image} alt={project.title} />
             </div>
             <div className="project-info">
               <div className="project-info-header">
                 <h3 className="project-title">{project.title}</h3>
-                <span className="project-year">{project.year}</span>
               </div>
               <p className="project-description">{project.description}</p>
               
@@ -95,7 +126,11 @@ function ProjectSlider() {
           </div>
         ))}
         
-        <div className="project-card updating-soon-card">
+        <div
+          className="project-card updating-soon-card"
+          data-reveal="card"
+          style={revealDelayStyle(40 + projects.length * 70)}
+        >
           <div className="updating-content">
             <div className="updating-icon">✨</div>
             <h3>Updating Soon!</h3>

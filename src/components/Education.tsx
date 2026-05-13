@@ -1,4 +1,5 @@
 import InfoCard from './InfoCard';
+import { revealDelayStyle } from '../utils/reveal';
 
 interface EducationItem {
   institution: string;
@@ -23,23 +24,24 @@ function Education() {
     }
   ];
 
-  return (
-    <div className="education-section">
-      <h2 className="section-title">Education</h2>
+    return (
+      <div className="education-section">
+      <h2 className="section-title" data-reveal="inline">Education</h2>
       <div className="education-list">
         {educationItems.map((item, index) => (
-          <InfoCard
-            key={index}
-            title={item.institution}
-            subtitle={item.degree}
-            period={item.period}
-            iconUrl={item.iconUrl}
-            details={item.details}
-            techStack={item.techStack}
-            techStackTitle="Relevant Coursework"
-            companyUrl={item.companyUrl}
-            isCurrent={item.isCurrent}
-          />
+          <div key={index} data-reveal="card" style={revealDelayStyle(60 + index * 70)}>
+            <InfoCard
+              title={item.institution}
+              subtitle={item.degree}
+              period={item.period}
+              iconUrl={item.iconUrl}
+              details={item.details}
+              techStack={item.techStack}
+              techStackTitle="Relevant Coursework"
+              companyUrl={item.companyUrl}
+              isCurrent={item.isCurrent}
+            />
+          </div>
         ))}
       </div>
     </div>
