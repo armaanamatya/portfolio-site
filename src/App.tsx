@@ -49,7 +49,7 @@ function App() {
           <h2 className="section-title" data-reveal="inline">About</h2>
           <p className="about-para" data-reveal="text" style={revealDelayStyle(70)}>
             <span className="highlight">CS + Math senior at the University of Houston</span> — went from{' '}
-            <span className="highlight">generic Java SWE → AI/ML</span> and never looked back. Currently cooking on CUDA (my fav class rn) and reading AI papers weekly.
+            <span className="highlight">generic Java SWE → AI/ML</span> and never looked back. Currently cooking on <span className="highlight">CUDA</span> (my fav class rn) and messing with a new <span className="highlight">FPGA</span> board, plus reading AI papers weekly.
           </p>
         </div>
 

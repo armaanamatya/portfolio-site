@@ -25,24 +25,16 @@ const projects: Project[] = [
   {
     id: 2,
     title: "JobTool",
-    description: "A personal tool for job application automation and tracking (Working on chrome extension)",
+    description: "jobs automated",
     image: PLACEHOLDER_IMAGE,
     techStack: ['React', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB'],
+    liveUrl: "https://openapplier.com/",
     githubUrl: "https://github.com/armaanamatya/jobtool"
-  },
-  {
-    id: 3,
-    title: "AImsg",
-    description: "Placeholder description — short blurb about what AImsg does, who it's for, and the main result. Replace later.",
-    image: PLACEHOLDER_IMAGE,
-    techStack: ['TypeScript', 'React', 'Node.js'],
-    liveUrl: "https://example.com/aimsg",
-    githubUrl: "https://github.com/armaanamatya/aimsg"
   },
   {
     id: 4,
     title: "OpenApplier",
-    description: "Placeholder description — short blurb about OpenApplier, the problem it solves, and key tech. Replace later.",
+    description: "jobs automated while you sleep",
     image: PLACEHOLDER_IMAGE,
     techStack: ['TypeScript', 'Next.js', 'Python'],
     liveUrl: "https://example.com/openapplier",
@@ -51,20 +43,18 @@ const projects: Project[] = [
   {
     id: 5,
     title: "Mixed-Precision GEMM in Triton",
-    description: "Placeholder description — tiled FP16 GEMM kernel in OpenAI Triton, autotuned and benchmarked across RTX 3080, RTX 5060 Ti, and AMD RX 7900. Replace later.",
+    description: "squeezing teraflops — custom tiled FP16 GEMM kernel, fully autotuned and benched across RTX and RX hardware",
     image: PLACEHOLDER_IMAGE,
     techStack: ['OpenAI Triton', 'CUDA', 'Python', 'PyTorch', 'Nsight Compute'],
-    liveUrl: "https://example.com/triton-gemm",
-    githubUrl: "https://github.com/armaanamatya/triton-gemm"
+    githubUrl: "https://github.com/armaanamatya/GEMM"
   },
   {
     id: 6,
     title: "Real-Time Distributed Keyword Spotting",
-    description: "Placeholder description — three-node distributed inference pipeline detecting spoken emergency commands within a 150 ms hard end-to-end deadline. Replace later.",
+    description: "mission-critical distributed AI — three-node inference pipeline hitting a hard 150ms deadline for emergency voice commands",
     image: PLACEHOLDER_IMAGE,
     techStack: ['Python', 'PyTorch', 'Wav2Vec2', 'CUDA', 'VxWorks', 'UDP'],
-    liveUrl: "https://example.com/kws-pipeline",
-    githubUrl: "https://github.com/armaanamatya/kws-pipeline"
+    githubUrl: "https://github.com/armaanamatya/realtimedist-pipeline"
   }
 ];
 
