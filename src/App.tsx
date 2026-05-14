@@ -48,10 +48,8 @@ function App() {
         <div className="page-section" id="about">
           <h2 className="section-title" data-reveal="inline">About</h2>
           <p className="about-para" data-reveal="text" style={revealDelayStyle(70)}>
-            I'm a <span className="highlight">CS + Math senior</span> at the University of Houston with a focus on AI research — currently working on token compression methods for multimodal models and engineering scalable vision–language APIs at{' '}
-            <span className="highlight">Artinafti</span>. I've interned across ML research (Algoverse, FuseMachines) and product engineering (MyMCAT.ai, F1Soft), and I care a lot about building things that actually ship.
-            When I'm not in the lab, I'm grinding CUDA for my GPU class, reading AI papers weekly 📄, and{' '}
-            <span className="big-red-f">F</span>ailing exams and locking in.
+            <span className="highlight">CS + Math senior at the University of Houston</span> — went from{' '}
+            <span className="highlight">generic Java SWE → AI/ML</span> and never looked back. Currently cooking on CUDA (my fav class rn) and reading AI papers weekly.
           </p>
         </div>
 

@@ -33,19 +33,8 @@ function Skills() {
             data-reveal="card"
             style={revealDelayStyle(50 + categoryIndex * 80)}
           >
-            <h3 className="category-title-flow">{category.title}</h3>
-            <div className="skills-icons-flow">
-              {category.skills.map((skill, skillIndex) => (
-                <span
-                  key={skill}
-                  className="skill-chip-flow"
-                  data-reveal="micro"
-                  style={revealDelayStyle(110 + categoryIndex * 80 + skillIndex * 45)}
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+            <span className="category-title-flow">{category.title}&nbsp;&nbsp;</span>
+            <span className="skills-plain-text">{category.skills.join(', ')}</span>
           </div>
         ))}
       </div>
