@@ -15,6 +15,14 @@ const PLACEHOLDER_IMAGE = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWl
 
 const projects: Project[] = [
   {
+    id: 7,
+    title: "Insider Signal",
+    description: "front-running the smart money — scrapes SEC filings in real time, normalizes insider transaction data, and surfaces high-confidence buy signals; 100+ active users tracking congress and C-suite moves",
+    image: PLACEHOLDER_IMAGE,
+    techStack: ['TypeScript', 'Next.js', 'Python', 'SEC EDGAR'],
+    liveUrl: "https://www.insidersignal.ai/"
+  },
+  {
     id: 1,
     title: "Qie",
     description: "An alternative to FL Studio. A full-fledged music production software designed for modern creators.",
