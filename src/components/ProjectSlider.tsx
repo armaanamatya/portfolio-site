@@ -23,15 +23,6 @@ const projects: Project[] = [
     liveUrl: "https://diannao.gumroad.com/"
   },
   {
-    id: 2,
-    title: "JobTool",
-    description: "jobs automated",
-    image: PLACEHOLDER_IMAGE,
-    techStack: ['React', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB'],
-    liveUrl: "https://openapplier.com/",
-    githubUrl: "https://github.com/armaanamatya/jobtool"
-  },
-  {
     id: 4,
     title: "OpenApplier",
     description: "jobs automated while you sleep",
