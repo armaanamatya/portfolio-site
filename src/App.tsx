@@ -87,22 +87,6 @@ function App() {
             />
           </div>
 
-          <div data-reveal="card" style={revealDelayStyle(140)}>
-            <ExperienceCard
-            title="Machine Learning Research Intern"
-            company="Algoverse"
-            location="Remote"
-            period="Aug 2025 - Feb 2026"
-            description={[
-              "Empirically studying agentic misalignment by analyzing how persistent memory and context accumulation induce goal drift, reward misgeneralization, and brittle decision-making in long-horizon LLM agents",
-              "Designed controlled evaluations using simulated agents, ablations over memory and context, and long-horizon task benchmarks to surface and characterize alignment failure modes"
-            ]}
-            techStack={['Python', 'PyTorch', 'LLMs']}
-            logoUrl="/logos/algoverse.jpg"
-            companyUrl="https://algoverseairesearch.org"
-            />
-          </div>
-
           <div data-reveal="card" style={revealDelayStyle(200)}>
             <ExperienceCard
             title="Software Engineer"
