@@ -58,17 +58,33 @@ function App() {
           <h2 className="section-title" data-reveal="inline">Work Experience</h2>
           <div data-reveal="card" style={revealDelayStyle(20)}>
             <ExperienceCard
+            title="Forward Deployed Engineer Intern"
+            company="Autonomize AI"
+            location="Austin, TX"
+            period="May 2026 - Present"
+            description={[
+              "Building full-stack solutions on Microsoft Azure for enterprise AI deployments"
+            ]}
+            techStack={['Full-Stack', 'Microsoft Azure']}
+            logoUrl="/logos/autonomizeai_logo.jpg"
+            companyUrl="https://autonomize.ai"
+            isCurrent={true}
+            />
+          </div>
+
+          <div data-reveal="card" style={revealDelayStyle(50)}>
+            <ExperienceCard
             title="AI Intern"
             company="Artinafti"
             location="Houston, TX"
-            period="Jan 2026 - Present"
+            period="Jan 2026 - May 2026"
             description={[
               "Engineered multimodal vision–language models for image upscaling, tagging, and generation tasks",
               "Reduced inference latency by 30% by building scalable APIs with FastAPI, NestJS, Redis, and PostgreSQL"
             ]}
             techStack={['FastAPI', 'NestJS', 'Redis', 'PostgreSQL']}
             logoText="artinafti"
-            isCurrent={true}
+            isCurrent={false}
             />
           </div>
 
