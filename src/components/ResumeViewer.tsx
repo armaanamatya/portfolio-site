@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import './ResumeViewer.css'
 
-const RESUME_URL = '/Armaan-Amatya_Recent_Resume.pdf'
-const RESUME_FILENAME = 'Armaan-Amatya_Recent_Resume.pdf'
+const RESUME_URL = '/Armaan_Amatya_AI_Inference.pdf'
+const RESUME_FILENAME = 'Armaan_Amatya_AI_Inference.pdf'
 
 interface ResumeViewerProps {
   isOpen: boolean

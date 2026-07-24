@@ -58,65 +58,84 @@ function App() {
           <h2 className="section-title" data-reveal="inline">Work Experience</h2>
           <div data-reveal="card" style={revealDelayStyle(20)}>
             <ExperienceCard
-            title="Forward Deployed Engineer Intern"
+            title="Machine Learning Engineer Intern"
             company="Autonomize AI"
             location="Austin, TX"
             period="May 2026 - Present"
             description={[
-              "Building full-stack solutions on Microsoft Azure for enterprise AI deployments"
+              "Building deep RL algorithms to improve LLM alignment in clinical healthcare workflows on the AI/ML team",
+              "Automated processing of 30k+ claims weekly by building multimodal document-intelligence pipelines combining OCR, layout parsing, and LLM-based extraction over unstructured clinical records",
+              "Shipped multi-agent LLM systems from POC to production for Fortune 500 healthcare customers with human-in-the-loop evaluation and auditability"
             ]}
-            techStack={['Full-Stack', 'Microsoft Azure']}
+            techStack={['PyTorch', 'LLMs', 'RL']}
             logoUrl="/logos/autonomizeai_logo.jpg"
             companyUrl="https://autonomize.ai"
             isCurrent={true}
             />
           </div>
 
-          <div data-reveal="card" style={revealDelayStyle(50)}>
+          <div data-reveal="card" style={revealDelayStyle(35)}>
             <ExperienceCard
-            title="AI Intern"
-            company="Artinafti"
-            location="Houston, TX"
-            period="Jan 2026 - May 2026"
+            title="AI Engineer"
+            company="DeepInvent.ai (#5 hire)"
+            location="Austin, TX"
+            period="May 2026 - Present"
             description={[
-              "Engineered multimodal vision–language models for image upscaling, tagging, and generation tasks",
-              "Reduced inference latency by 30% by building scalable APIs with FastAPI, NestJS, Redis, and PostgreSQL"
+              "Enabled 2,000+ patentable inventions in launch week by building the evaluation stack for AI research agents that mine scientific literature and patent filings at a pre-seed autoresearch startup",
+              "Blocked regressions across model, prompt, and tool changes by engineering replay-based eval harnesses with golden-set suites and calibrated LLM-as-judge graders scoring invention novelty"
             ]}
-            techStack={['FastAPI', 'NestJS', 'Redis', 'PostgreSQL']}
-            logoText="artinafti"
-            isCurrent={false}
+            techStack={['LLMs', 'RAG']}
+            logoText="deepinvent"
+            isCurrent={true}
             />
           </div>
 
-          <div data-reveal="card" style={revealDelayStyle(80)}>
+          <div data-reveal="card" style={revealDelayStyle(50)}>
             <ExperienceCard
             title="Undergraduate Researcher"
             company="University of Houston"
             location="Houston, TX"
             period="Jan 2026 - Present"
             description={[
-              "Developing a novel token compression method for multimodal models"
+              "Cut multimodal LLM inference latency ~40% by developing a novel token compression method reducing visual tokens ~60% while retaining ~98% of baseline benchmark accuracy on Qwen2.5-Omni and Qwen3-Omni",
+              "Deployed compressed models to NVIDIA Jetson Orin for on-device inference after multi-GPU distributed training (PyTorch DDP) on RTX 6000s, cutting VRAM ~45% and sustaining ~2x higher tokens/s; won Best Research Award"
             ]}
-            techStack={[]}
+            techStack={['PyTorch']}
             logoUrl="/uh.jpg"
             isCurrent={true}
             />
           </div>
 
-          <div data-reveal="card" style={revealDelayStyle(200)}>
+          <div data-reveal="card" style={revealDelayStyle(80)}>
             <ExperienceCard
-            title="Software Engineer"
-            company="MyMCAT.ai"
-            location="Houston, TX"
-            period="Aug 2024 - Apr 2025"
+            title="AI Engineer Intern"
+            company="Artinafti"
+            location="Austin, TX"
+            period="Jan 2026 - May 2026"
             description={[
-              "Built and scaled an AI-driven MCAT preparation platform through personalized learning, supporting 1,000+ students and $20K MRR",
-              "Improved student outcomes through adaptive tutoring, increasing scores by 20%",
-              "Contributed to product growth leading to a $6K acquisition"
+              "Improved visual fidelity 25% by fine-tuning diffusion-based upscaling and generation models with LoRA adapters and detail-preserving objectives for text and faces, adding photographic color-tone control",
+              "Reduced inference latency 30% by building scalable model-serving APIs with FastAPI, Redis, and PostgreSQL with request batching and caching"
             ]}
-            techStack={['Next.js', 'TypeScript', 'Supabase', 'AI']}
-            logoUrl="/logos/mymcat.jpg"
-            companyUrl="https://mymcat.ai"
+            techStack={['FastAPI', 'Redis', 'PostgreSQL']}
+            logoText="artinafti"
+            isCurrent={false}
+            />
+          </div>
+
+          <div data-reveal="card" style={revealDelayStyle(110)}>
+            <ExperienceCard
+            title="Machine Learning Engineer Intern"
+            company="AutoHDR"
+            location="Austin, TX (Remote)"
+            period="Jan 2026 - Apr 2026"
+            description={[
+              "Cut per-image turnaround from ~5 minutes to under 15 seconds across 10,000+ listing photos monthly with diffusion image-to-image pipelines (PyTorch) for exposure fusion, denoising, and 4x super-resolution",
+              "Reduced redundant processing ~25% by training an image-deduplication model, contrastively fine-tuning CLIP embeddings on listing photo pairs to catch near-duplicate shots",
+              "Produced 1,000+ property tour videos monthly by shipping an image-to-video generation pipeline with depth-aware camera motion and temporally consistent shot transitions"
+            ]}
+            techStack={['PyTorch']}
+            logoText="autohdr"
+            isCurrent={false}
             />
           </div>
 
@@ -127,27 +146,11 @@ function App() {
             location="New York, NY"
             period="May 2024 - Aug 2024"
             description={[
-              "Fine-tuned a FaceNet-based face recognition model on a proprietary company dataset, achieving 98% precision for real-world attendance tracking under varied lighting and pose conditions",
-              "Built a production-grade REST API using Python, FastAPI, PostgreSQL, and Docker; implemented async server-side processing and batch inference to support concurrent requests from a mobile attendance application"
+              "Achieved 98% precision on real-world attendance tracking by fine-tuning a FaceNet model; served real-time inference to a production mobile app (FastAPI, Docker) with async batched requests"
             ]}
-            techStack={['Python', 'FastAPI', 'PostgreSQL', 'Docker', 'FaceNet']}
+            techStack={['Python', 'FastAPI', 'Docker', 'FaceNet']}
             logoUrl="/logos/fuse.jpg"
             companyUrl="https://fusemachines.com"
-            />
-          </div>
-
-          <div data-reveal="card" style={revealDelayStyle(320)}>
-            <ExperienceCard
-            title="Software Engineer Intern"
-            company="F1Soft International"
-            location="Remote"
-            period="May 2023 - Aug 2023"
-            description={[
-              "Improved investment platform performance by optimizing Java Spring Boot backend APIs through query optimization, caching, and secure stateless authentication, achieving a 50% reduction in API latency"
-            ]}
-            techStack={['Java', 'Spring Boot', 'Spring Security', 'JWT']}
-            logoUrl="/logos/f1soft.jpg"
-            companyUrl="https://f1soft.com"
             />
           </div>
         </div>
