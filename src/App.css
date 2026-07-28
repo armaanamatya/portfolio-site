@@ -386,7 +386,23 @@ body {
 
 /* ===================== Responsive ===================== */
 @media (max-width: 900px) {
-  .left-sidebar { display: none; }
+  .left-sidebar {
+    position: fixed;
+    left: 50%;
+    top: auto;
+    bottom: 16px;
+    transform: translateX(-50%);
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    padding: 6px 8px;
+  }
+
+  .sidebar-list {
+    flex-direction: row;
+    gap: 4px;
+  }
 }
 
 @media (max-width: 640px) {
