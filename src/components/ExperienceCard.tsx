@@ -19,7 +19,6 @@ function ExperienceCard({
   company, 
   period, 
   description,
-  techStack,
   logoUrl,
   logoText,
   isCurrent,
@@ -62,41 +61,6 @@ function ExperienceCard({
                 <li key={index}>{item}</li>
               ))}
             </ul>
-          </div>
-
-          <div className="tech-stack">
-            {techStack.map((tech, index) => {
-              const skillIconMap: { [key: string]: string } = {
-                'React': 'react',
-                'TypeScript': 'ts',
-                'Python': 'python',
-                'FastAPI': 'fastapi',
-                'Next.js': 'nextjs',
-                'Prisma': 'prisma',
-                'Supabase': 'supabase',
-                'Node.js': 'nodejs',
-                'Java': 'java',
-                'Spring Boot': 'spring',
-                'MySQL': 'mysql',
-                'Redis': 'redis',
-                'PyTorch': 'pytorch',
-                'scikit-learn': 'scikitlearn',
-                'Docker': 'docker',
-                'PostgreSQL': 'postgres',
-                'NestJS': 'nestjs',
-              };
-
-              const iconName = skillIconMap[tech];
-              const genericTerms = ['AI', 'ML', 'NLP', 'BERT', 'LLM', 'LLMs', 'Research', 'WebSocket', 'LangGraph', 'REST API', 'FaceNet', 'Spring Security', 'JWT'];
-              if (genericTerms.includes(tech) || !iconName) return null;
-
-              const iconUrl = `https://skillicons.dev/icons?i=${iconName}&theme=dark`;
-              return (
-                <div key={index} className="tech-icon" title={tech}>
-                  <img src={iconUrl} alt={tech} />
-                </div>
-              );
-            })}
           </div>
 
           {companyUrl && (
