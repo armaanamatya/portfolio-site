@@ -85,7 +85,7 @@ function App() {
               "Blocked regressions across model, prompt, and tool changes by engineering replay-based eval harnesses with golden-set suites and calibrated LLM-as-judge graders scoring invention novelty"
             ]}
             techStack={['LLMs', 'RAG']}
-            logoText="deepinvent"
+            logoUrl="/logos/deepinvent.png"
             isCurrent={true}
             />
           </div>
@@ -134,7 +134,7 @@ function App() {
               "Produced 1,000+ property tour videos monthly by shipping an image-to-video generation pipeline with depth-aware camera motion and temporally consistent shot transitions"
             ]}
             techStack={['PyTorch']}
-            logoText="autohdr"
+            logoUrl="/logos/autohdr.png"
             isCurrent={false}
             />
           </div>
