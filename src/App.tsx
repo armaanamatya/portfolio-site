@@ -124,7 +124,7 @@ function App() {
 
           <div data-reveal="card" style={revealDelayStyle(110)}>
             <ExperienceCard
-            title="Machine Learning Engineer Intern"
+            title="Machine Learning Engineer"
             company="AutoHDR"
             location="Austin, TX (Remote)"
             period="Jan 2026 - Apr 2026"
