@@ -23,6 +23,14 @@ const projects: Project[] = [
     liveUrl: "https://www.insidersignal.ai/"
   },
   {
+    id: 2,
+    title: "MyMCAT.ai",
+    description: "AI-based MCAT prep platform serving 1,000+ university students — personalized study plans, adaptive practice, and an analytics dashboard tracking progress across every section",
+    image: PLACEHOLDER_IMAGE,
+    techStack: ['TypeScript', 'Next.js', 'Prisma', 'Supabase', 'Clerk', 'Stripe'],
+    liveUrl: "https://www.mymcat.ai/"
+  },
+  {
     id: 1,
     title: "Qie",
     description: "An alternative to FL Studio. A full-fledged music production software designed for modern creators.",
