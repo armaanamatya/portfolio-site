@@ -74,6 +74,7 @@ function App() {
             />
           </div>
 
+          {/* DeepInvent.ai experience - temporarily hidden
           <div data-reveal="card" style={revealDelayStyle(35)}>
             <ExperienceCard
             title="AI Engineer"
@@ -89,6 +90,7 @@ function App() {
             isCurrent={true}
             />
           </div>
+          */}
 
           <div data-reveal="card" style={revealDelayStyle(50)}>
             <ExperienceCard
