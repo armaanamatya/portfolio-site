@@ -39,15 +39,6 @@ const projects: Project[] = [
     liveUrl: "https://diannao.gumroad.com/"
   },
   {
-    id: 4,
-    title: "OpenApplier",
-    description: "jobs automated while you sleep",
-    image: PLACEHOLDER_IMAGE,
-    techStack: ['TypeScript', 'Next.js', 'Python'],
-    liveUrl: "https://example.com/openapplier",
-    githubUrl: "https://github.com/armaanamatya/openapplier"
-  },
-  {
     id: 5,
     title: "Mixed-Precision GEMM in Triton",
     description: "squeezing teraflops — custom tiled FP16 GEMM kernel, fully autotuned and benched across RTX and RX hardware",
