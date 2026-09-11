@@ -61,7 +61,7 @@ function App() {
             title="Machine Learning Engineer Intern"
             company="Autonomize AI"
             location="Austin, TX"
-            period="May 2026 - Present"
+            period="May 2026 - Aug 2026"
             description={[
               "Building deep RL algorithms to improve LLM alignment in clinical healthcare workflows on the AI/ML team",
               "Automated processing of 30k+ claims weekly by building multimodal document-intelligence pipelines combining OCR, layout parsing, and LLM-based extraction over unstructured clinical records",
@@ -70,7 +70,7 @@ function App() {
             techStack={['PyTorch', 'LLMs', 'RL']}
             logoUrl="/logos/autonomizeai_logo.jpg"
             companyUrl="https://autonomize.ai"
-            isCurrent={true}
+            isCurrent={false}
             />
           </div>
 

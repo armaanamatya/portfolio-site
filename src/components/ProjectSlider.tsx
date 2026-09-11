@@ -32,10 +32,10 @@ const projects: Project[] = [
   },
   {
     id: 1,
-    title: "Qie",
-    description: "An alternative to FL Studio. A full-fledged music production software designed for modern creators.",
+    title: "Qie Stem Slicer",
+    description: "An Electron frontend on a Python/Demucs stem-separation backend, with a PyQt build for other desktop platforms; published free on Gumroad at 5.0 stars across 6 ratings",
     image: "/qieimg.png",
-    techStack: ['Python', 'PyQT', 'Demucs'],
+    techStack: ['Python', 'PyQt', 'Electron', 'Demucs'],
     liveUrl: "https://diannao.gumroad.com/"
   },
   {
