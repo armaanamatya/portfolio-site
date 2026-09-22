@@ -55,7 +55,6 @@ function App() {
           <ul className="about-list" data-reveal="text" style={revealDelayStyle(120)}>
             <li><span className="highlight">Generic SWE → AI/ML</span> and never looked back</li>
             <li>Got into <span className="highlight">inference engineering</span> during the summer</li>
-            <li>Currently cooking on <span className="highlight">CUDA</span> (my fav class rn)</li>
             <li>Reading AI papers weekly!</li>
             <li>
               Recently started contributing to{' '}
