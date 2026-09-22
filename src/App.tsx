@@ -80,11 +80,12 @@ function App() {
             location="Austin, TX"
             period="May 2026 - Aug 2026"
             description={[
-              "Building deep RL algorithms to improve LLM alignment in clinical healthcare workflows on the AI/ML team",
-              "Automated processing of 30k+ claims weekly by building multimodal document-intelligence pipelines combining OCR, layout parsing, and LLM-based extraction over unstructured clinical records",
-              "Shipped multi-agent LLM systems from POC to production for Fortune 500 healthcare customers with human-in-the-loop evaluation and auditability"
+              "Quantized Qwen2.5-VL-32B (4-bit AWQ) and GRPO post-trained it for healthcare OCR at 95% of full-model field accuracy on 1,000+ documents; served via vLLM as an HTTP endpoint on a 16GB Azure T4 with CPU offload",
+              "Made production OCR on Azure and GCP 35% faster at under 2% accuracy loss by pruning 50%+ redundant document-image tokens, cutting KV-cache memory 40%",
+              "Integrated a model router into the platform to send pages to smaller, cheaper OCR models",
+              "Shipped a RAG chatbot over 1,000+ policy docs, saving 20+ hours/week at 90%+ accuracy and 2s per question"
             ]}
-            techStack={['PyTorch', 'LLMs', 'RL']}
+            techStack={['PyTorch', 'vLLM', 'AWQ', 'GRPO', 'RAG']}
             logoUrl="/logos/autonomizeai_logo.jpg"
             companyUrl="https://autonomize.ai"
             isCurrent={false}
@@ -116,10 +117,10 @@ function App() {
             location="Houston, TX"
             period="Jan 2026 - Present"
             description={[
-              "Cut multimodal LLM inference latency ~40% by developing a novel token compression method reducing visual tokens ~60% while retaining ~98% of baseline benchmark accuracy on Qwen2.5-Omni and Qwen3-Omni",
-              "Deployed compressed models to NVIDIA Jetson Orin for on-device inference after multi-GPU distributed training (PyTorch DDP) on RTX 6000s, cutting VRAM ~45% and sustaining ~2x higher tokens/s; won Best Research Award"
+              "Reduced multimodal LLM inference latency 40% at 98% of baseline accuracy with novel token compression that cuts visual tokens 60% and KV-cache footprint on Qwen2.5/3-Omni; won Best Research Award, submitting to CVPR 2027",
+              "Deployed compressed multimodal models to NVIDIA Jetson Orin for on-device inference, trained with multi-GPU distributed PyTorch (DDP and FSDP) on RTX 6000s"
             ]}
-            techStack={['PyTorch']}
+            techStack={['PyTorch', 'DDP/FSDP', 'Jetson Orin']}
             logoUrl="/uh.jpg"
             isCurrent={true}
             />
@@ -129,13 +130,15 @@ function App() {
             <ExperienceCard
             title="AI Engineer Intern"
             company="Artinafti"
-            location="Austin, TX"
+            location="Remote"
             period="Jan 2026 - May 2026"
             description={[
-              "Improved visual fidelity 25% by fine-tuning diffusion-based upscaling and generation models with LoRA adapters and detail-preserving objectives for text and faces, adding photographic color-tone control",
-              "Reduced inference latency 30% by building scalable model-serving APIs with FastAPI, Redis, and PostgreSQL with request batching and caching"
+              "Beat 10+ open-source upscalers on 2k+ blurry test images by fine-tuning Real-ESRGAN on 4,000 artwork pairs",
+              "Improved image quality 25% (FID) by LoRA fine-tuning Flux on 5k+ artworks, with color-tone controls",
+              "Cut face and text warping in generation with CodeFormer restoration, text preservation and Flux ControlNet guidance",
+              "Served ESRGAN and 8-bit Flux at 1,000+ requests a day on an AWS A10G, with a Redis job queue and cache and results in S3; containerized with Docker and deployed by GitHub Actions, monitored in Sentry"
             ]}
-            techStack={['FastAPI', 'Redis', 'PostgreSQL']}
+            techStack={['Real-ESRGAN', 'Flux', 'LoRA', 'Redis', 'AWS', 'Docker']}
             logoText="artinafti"
             isCurrent={false}
             />
@@ -143,16 +146,16 @@ function App() {
 
           <div data-reveal="card" style={revealDelayStyle(110)}>
             <ExperienceCard
-            title="Machine Learning Engineer"
+            title="Machine Learning Engineer Intern"
             company="AutoHDR"
             location="Austin, TX (Remote)"
-            period="Jan 2026 - Apr 2026"
+            period="Aug 2025 - Dec 2025"
             description={[
-              "Cut per-image turnaround from ~5 minutes to under 15 seconds across 10,000+ listing photos monthly with diffusion image-to-image pipelines (PyTorch) for exposure fusion, denoising, and 4x super-resolution",
-              "Reduced redundant processing ~25% by training an image-deduplication model, contrastively fine-tuning CLIP embeddings on listing photo pairs to catch near-duplicate shots",
-              "Produced 1,000+ property tour videos monthly by shipping an image-to-video generation pipeline with depth-aware camera motion and temporally consistent shot transitions"
+              "Cut per-photo enhancement from 5 minutes to under 15 seconds on 100,000+ real-estate listing photos a month with PyTorch exposure fusion, denoising and 4x super-resolution, deployed as a FastAPI service on AWS EC2",
+              "Cut redundant processing 25% with an image deduplication service, exposed by FastAPI to the TypeScript backend",
+              "Produced 1,000+ real-estate tour videos monthly with a depth-aware image-to-video model deployed via FastAPI"
             ]}
-            techStack={['PyTorch']}
+            techStack={['PyTorch', 'FastAPI', 'AWS EC2']}
             logoUrl="/logos/autohdr.png"
             isCurrent={false}
             />
@@ -165,9 +168,9 @@ function App() {
             location="New York, NY"
             period="May 2024 - Aug 2024"
             description={[
-              "Achieved 98% precision on real-world attendance tracking by fine-tuning a FaceNet model; served real-time inference to a production mobile app (FastAPI, Docker) with async batched requests"
+              "Fine-tuned FaceNet to 98% precision for a production attendance app, then served it from a Dockerized FastAPI service, with ONNX to FP16 TensorRT cutting latency and cloud cost 40%"
             ]}
-            techStack={['Python', 'FastAPI', 'Docker', 'FaceNet']}
+            techStack={['FastAPI', 'Docker', 'ONNX', 'TensorRT']}
             logoUrl="/logos/fuse.jpg"
             companyUrl="https://fusemachines.com"
             />
