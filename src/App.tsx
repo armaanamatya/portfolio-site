@@ -36,6 +36,8 @@ function App() {
               <p className="hero-subtitle">
                 Senior majoring in CS + Math @{' '}
                 <img src="/uh.jpg" alt="University of Houston" className="uh-logo" title="University of Houston" />
+                <span className="hero-subtitle-sep" aria-hidden="true">·</span>
+                <span className="hero-subtitle-note">graduating soon!</span>
               </p>
             </div>
             <div className="profile-image">

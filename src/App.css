@@ -93,6 +93,17 @@ body {
   border-radius: 0.2rem;
 }
 
+.hero-subtitle-sep {
+  margin: 0 0.5rem;
+  color: #777;
+}
+
+.hero-subtitle-note {
+  color: #e8e8e8;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
 .hero-name-word,
 .hero-wave-shell {
   display: inline-block;
