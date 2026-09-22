@@ -297,6 +297,36 @@ body {
   font-weight: 500;
 }
 
+.about-list {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #aaa;
+  margin: 0.6rem 0 0 0;
+  padding-left: 1.2rem;
+}
+
+.about-list li {
+  margin: 0;
+  padding-left: 0.15rem;
+}
+
+.about-list .highlight {
+  color: #e8e8e8;
+  font-weight: 500;
+}
+
+.about-list .about-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(232, 232, 232, 0.45);
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+.about-list .about-link:hover {
+  color: #ffffff;
+  text-decoration-color: #ffffff;
+}
+
 /* big red F easter egg */
 .big-red-f {
   display: inline-block;
