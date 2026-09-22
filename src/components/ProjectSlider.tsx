@@ -47,6 +47,14 @@ const projects: Project[] = [
     githubUrl: "https://github.com/armaanamatya/GEMM"
   },
   {
+    id: 8,
+    title: "Domain QA System for Scientific PDFs",
+    description: "ask 75 research papers a question: QLoRA-tuned Mistral-7B on 234 QA pairs with hybrid RAG over the corpus, 80% win rate with GPT-4o as judge",
+    image: PLACEHOLDER_IMAGE,
+    techStack: ['PyTorch', 'HuggingFace', 'PEFT', 'LangChain', 'FAISS', 'Docker'],
+    githubUrl: "https://github.com/armaanamatya"
+  },
+  {
     id: 6,
     title: "Real-Time Distributed Keyword Spotting",
     description: "mission-critical distributed AI — three-node inference pipeline hitting a hard 150ms deadline for emergency voice commands",

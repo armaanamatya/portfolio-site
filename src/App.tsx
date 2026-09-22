@@ -36,6 +36,8 @@ function App() {
               <p className="hero-subtitle">
                 Senior majoring in CS + Math @{' '}
                 <img src="/uh.jpg" alt="University of Houston" className="uh-logo" title="University of Houston" />
+                <span className="hero-subtitle-sep" aria-hidden="true">·</span>
+                <span className="hero-subtitle-note">graduating soon!</span>
               </p>
             </div>
             <div className="profile-image">
@@ -48,9 +50,25 @@ function App() {
         <div className="page-section" id="about">
           <h2 className="section-title" data-reveal="inline">About</h2>
           <p className="about-para" data-reveal="text" style={revealDelayStyle(70)}>
-            <span className="highlight">CS + Math senior at the University of Houston</span> went from{' '}
-            <span className="highlight">generic Java SWE → AI/ML</span> and never looked back. Currently cooking on <span className="highlight">CUDA</span> (my fav class rn), plus reading AI papers weekly.
+            <span className="highlight">CS + Math senior at the University of Houston</span>. The short version:
           </p>
+          <ul className="about-list" data-reveal="text" style={revealDelayStyle(120)}>
+            <li><span className="highlight">Generic SWE → AI/ML</span> and never looked back</li>
+            <li>Got into <span className="highlight">inference engineering</span> during the summer</li>
+            <li>Currently cooking on <span className="highlight">CUDA</span> (my fav class rn)</li>
+            <li>Reading AI papers weekly!</li>
+            <li>
+              Recently started contributing to{' '}
+              <a
+                href="https://github.com/vllm-project/vllm-omni/pulls?q=is%3Apr+author%3Aarmaanamatya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="about-link highlight"
+              >
+                vLLM-Omni
+              </a>
+            </li>
+          </ul>
         </div>
 
         {/* Work Experience */}
