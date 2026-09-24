@@ -1,15 +1,12 @@
-import { useState } from 'react'
 import './App.css'
 import ExperienceCard from './components/ExperienceCard'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import ProjectSlider from './components/ProjectSlider'
-import ResumeViewer from './components/ResumeViewer'
 import { useScrollReveal } from './hooks/useScrollReveal'
 import { revealDelayStyle } from './utils/reveal'
 
 function App() {
-  const [resumeViewerOpen, setResumeViewerOpen] = useState(false)
   useScrollReveal()
 
   return (
@@ -79,10 +76,7 @@ function App() {
             company="Autonomize AI"
             location="Austin, TX"
             period="May 2026 - Aug 2026"
-            description={[
-              "Integrated a model router into the platform to send pages to smaller, cheaper OCR models",
-              "Shipped a RAG chatbot over 1,000+ policy docs, saving 20+ hours/week at 90%+ accuracy and 2s per question"
-            ]}
+            description={[]}
             techStack={['PyTorch', 'vLLM', 'AWQ', 'GRPO', 'RAG']}
             logoUrl="/logos/autonomizeai_logo.jpg"
             companyUrl="https://autonomize.ai"
@@ -238,24 +232,9 @@ function App() {
               </svg>
             </a>
           </li>
-          <li className="sidebar-item">
-            <button
-              type="button"
-              className="sidebar-link"
-              title="View Resume"
-              onClick={() => setResumeViewerOpen(true)}
-              data-reveal="sidebar"
-              style={revealDelayStyle(190)}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-              </svg>
-            </button>
-          </li>
         </ul>
       </nav>
 
-      <ResumeViewer isOpen={resumeViewerOpen} onClose={() => setResumeViewerOpen(false)} />
       <div className="bottom-fade"></div>
     </div>
   )
