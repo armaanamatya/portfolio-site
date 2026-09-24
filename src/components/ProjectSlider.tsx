@@ -15,30 +15,6 @@ const PLACEHOLDER_IMAGE = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWl
 
 const projects: Project[] = [
   {
-    id: 7,
-    title: "Insider Signal",
-    description: "front-running the smart money — scrapes SEC filings in real time, normalizes insider transaction data, and surfaces high-confidence buy signals; 100+ active users tracking congress and C-suite moves",
-    image: PLACEHOLDER_IMAGE,
-    techStack: ['TypeScript', 'Next.js', 'Python', 'SEC EDGAR'],
-    liveUrl: "https://www.insidersignal.ai/"
-  },
-  {
-    id: 2,
-    title: "MyMCAT.ai",
-    description: "AI-based MCAT prep platform serving 1,000+ university students — personalized study plans, adaptive practice, and an analytics dashboard tracking progress across every section",
-    image: PLACEHOLDER_IMAGE,
-    techStack: ['TypeScript', 'Next.js', 'Prisma', 'Supabase', 'Clerk', 'Stripe'],
-    liveUrl: "https://www.mymcat.ai/"
-  },
-  {
-    id: 1,
-    title: "Qie Stem Slicer",
-    description: "An Electron frontend on a Python/Demucs stem-separation backend, with a PyQt build for other desktop platforms; published free on Gumroad at 5.0 stars across 6 ratings",
-    image: "/qieimg.png",
-    techStack: ['Python', 'PyQt', 'Electron', 'Demucs'],
-    liveUrl: "https://diannao.gumroad.com/"
-  },
-  {
     id: 5,
     title: "Mixed-Precision GEMM in Triton",
     description: "squeezing teraflops — custom tiled FP16 GEMM kernel, fully autotuned and benched across RTX and RX hardware",
@@ -61,6 +37,30 @@ const projects: Project[] = [
     image: PLACEHOLDER_IMAGE,
     techStack: ['Python', 'PyTorch', 'Wav2Vec2', 'CUDA', 'VxWorks', 'UDP'],
     githubUrl: "https://github.com/armaanamatya/realtimedist-pipeline"
+  },
+  {
+    id: 7,
+    title: "Insider Signal",
+    description: "front-running the smart money — scrapes SEC filings in real time, normalizes insider transaction data, and surfaces high-confidence buy signals; 100+ active users tracking congress and C-suite moves",
+    image: PLACEHOLDER_IMAGE,
+    techStack: ['TypeScript', 'Next.js', 'Python', 'SEC EDGAR'],
+    liveUrl: "https://www.insidersignal.ai/"
+  },
+  {
+    id: 2,
+    title: "MyMCAT.ai",
+    description: "AI-based MCAT prep platform serving 1,000+ university students — personalized study plans, adaptive practice, and an analytics dashboard tracking progress across every section",
+    image: PLACEHOLDER_IMAGE,
+    techStack: ['TypeScript', 'Next.js', 'Prisma', 'Supabase', 'Clerk', 'Stripe'],
+    liveUrl: "https://www.mymcat.ai/"
+  },
+  {
+    id: 1,
+    title: "Qie Stem Slicer",
+    description: "An Electron frontend on a Python/Demucs stem-separation backend, with a PyQt build for other desktop platforms; published free on Gumroad at 5.0 stars across 6 ratings",
+    image: "/qieimg.png",
+    techStack: ['Python', 'PyQt', 'Electron', 'Demucs'],
+    liveUrl: "https://diannao.gumroad.com/"
   }
 ];
 

@@ -80,8 +80,6 @@ function App() {
             location="Austin, TX"
             period="May 2026 - Aug 2026"
             description={[
-              "Quantized Qwen2.5-VL-32B (4-bit AWQ) and GRPO post-trained it for healthcare OCR at 95% of full-model field accuracy on 1,000+ documents; served via vLLM as an HTTP endpoint on a 16GB Azure T4 with CPU offload",
-              "Made production OCR on Azure and GCP 35% faster at under 2% accuracy loss by pruning 50%+ redundant document-image tokens, cutting KV-cache memory 40%",
               "Integrated a model router into the platform to send pages to smaller, cheaper OCR models",
               "Shipped a RAG chatbot over 1,000+ policy docs, saving 20+ hours/week at 90%+ accuracy and 2s per question"
             ]}
